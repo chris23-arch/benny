@@ -799,7 +799,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                             ),
                             textAlign: TextAlign.start,
                           ),
-                           const SizedBox(height: 12),
+                           SizedBox(height: 12),
                             Stack(
                             children: [
                               // Underline
