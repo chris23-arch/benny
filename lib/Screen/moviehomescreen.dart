@@ -185,7 +185,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                 ),
                               ),
                             ),
-                            const SizedBox(
+                             SizedBox(
                                 width:
                                     17.0), // Adjust the space between search bar and image
                             GestureDetector(
