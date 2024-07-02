@@ -493,8 +493,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                   fontSize: 14,
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w500),
-                            )
-                          ])
+                            ),
+                          ]),
                           // textAlign: TextAlign.left,
                           ),
                     ])),
@@ -769,7 +769,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Trailer',
+                            'Trailer', 
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12,
@@ -778,7 +778,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),

@@ -63,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
       },
       child: Text(
         label,
-        style: TextStyle(color: Colors.green),
+        style: TextStyle(color: Colors.white),
       ),
     );
   }

@@ -55,6 +55,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                   ),
                 ]),
                 elevation: 0,
+
                 backgroundColor: Colors.transparent,
                 actions: [
                   Padding(
@@ -205,9 +206,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                                width:
-                                    8), // Add space between the text and the image
+                            SizedBox(width:8), // Add space between the text and the image
                             Align(
                                 alignment: Alignment
                                     .centerRight, // Align the image to the left

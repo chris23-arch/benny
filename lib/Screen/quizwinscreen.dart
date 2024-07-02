@@ -13,7 +13,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
     return Center(
       child: Text(
         'Quiz & Win Screen',
-        style: TextStyle(fontSize: 24),
+        style: TextStyle(fontSize: 27),
       ),
     );
   }
