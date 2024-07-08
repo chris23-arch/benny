@@ -1,3 +1,4 @@
+import 'package:benny/Screen/moviedetailscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -185,7 +186,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                 ),
                               ),
                             ),
-                             SizedBox(
+                            SizedBox(
                                 width:
                                     17.0), // Adjust the space between search bar and image
                             GestureDetector(
@@ -246,9 +247,88 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               child: _buildMovieCard(),
               // ),
             ),
+            SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
+              child: Container(
+                width: 700, // Adjust the width of the container here
+                decoration: BoxDecoration(
+                  color: Color(0xFF383838),
+                  borderRadius: BorderRadius.circular(4.0),
+                  border: Border.all(color: Color(0xFF4C4C4C), width: 2.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Movie Streaming Channel',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFFFFFFFF),
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Subscribe to our YouTube Channel for more updates',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFFFF0000),
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10,
+                              decoration: TextDecoration
+                                  .underline, // Underline the text
+                              decorationColor:
+                                  Color(0xFFFF0000), // Same color as the text
+                            ),
+                            maxLines: 1, // Ensure text stays on one line
+                            overflow: TextOverflow
+                                .ellipsis, // Handle overflow if necessary
+                          ),
+                          const SizedBox(height: 12),
+                          GestureDetector(
+                            onTap: () {
+                              // Handle tap event
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFF0000), // Red color
+                                borderRadius: BorderRadius.circular(
+                                    8.0), // Adjust container border radius
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 18, vertical: 8),
+                              child: Text(
+                                'Subscribe',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12,
+                                  color: Color(
+                                      0xFFFFFFFF), // Text color inside the button
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
 
-             SizedBox(height: 0),
-             Padding(
+            SizedBox(height: 24),
+            Padding(
               padding: EdgeInsets.only(left: 17.0, top: 0.0),
               child: Text(
                 'Trending',
@@ -278,22 +358,34 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                 ),
                 itemBuilder: (context, index) {
                   final movie = trendingMovies[index]; // Offset index by 2
-                  return _buildTrendingMovieCard(
-                      imagePath: movie['imagePath']!,
-                      title: movie['title']!,
-                      subtitle: movie['subtitle']!,
-                      rating: movie['rating']!);
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MovieDetailScreen(
+                            movieImage: movie['imagePath']!,
+                          ),
+                        ),
+                      );
+                    },
+                    child: _buildTrendingMovieCard(
+                        imagePath: movie['imagePath']!,
+                        title: movie['title']!,
+                        subtitle: movie['subtitle']!,
+                        rating: movie['rating']!),
+                  );
                 },
               ),
             ),
             // Trending header for the next set of movies
             SizedBox(height: 0),
             Padding(
-              padding:  EdgeInsets.only(left: 17.0, top: 8.0),
+              padding: EdgeInsets.only(left: 17.0, top: 8.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Text.rich(
+                    Text.rich(
                       TextSpan(
                           text: 'Movies', // Change the header text as needed
                           style: TextStyle(
@@ -362,11 +454,23 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                 ),
                 itemBuilder: (context, index) {
                   final movie = romanceMovies[index]; // Offset index by 2
-                  return _buildTrendingMovieCard(
-                    imagePath: movie['imagePath']!,
-                    title: movie['title']!,
-                    subtitle: movie['subtitle']!,
-                    rating: movie['rating']!,
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MovieDetailScreen(
+                            movieImage: movie['imagePath']!,
+                          ),
+                        ),
+                      );
+                    },
+                    child: _buildTrendingMovieCard(
+                      imagePath: movie['imagePath']!,
+                      title: movie['title']!,
+                      subtitle: movie['subtitle']!,
+                      rating: movie['rating']!,
+                    ),
                   );
                 },
               ),
@@ -437,26 +541,37 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               ),
             ),
             // Trending movies grid view for the next set of movies
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.only(left: 11.0),
               child: GridView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                itemCount:
-                    romanceSeries.length, // Exclude the first two movies
+                itemCount: romanceSeries.length, // Exclude the first two movies
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   childAspectRatio: 0.55,
                 ),
                 itemBuilder: (context, index) {
                   final movie = romanceSeries[index]; // Offset index by 2
-                  return _buildTrendingMovieCard(
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MovieDetailScreen(
+                            movieImage: movie['imagePath']!,
+                          ),
+                        ),
+                      );
+                    },
+                  child: _buildTrendingMovieCard(
                     imagePath: movie['imagePath']!,
                     title: movie['title']!,
                     subtitle: movie['subtitle']!,
                     rating: movie['rating']!,
+                  ),
                   );
                 },
               ),
@@ -469,34 +584,34 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text.rich(TextSpan(
-                              text:
-                                  'Series', // Change the header text as needed
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color(0xFFFFFFFF),
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w300),
-                              children: <TextSpan>[
-                            TextSpan(
-                              text: '/',
-                              style: TextStyle(
-                                  color: Color(0xFFFFFFFF),
-                                  fontSize: 16,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w700),
-                            ),
-                            TextSpan(
-                              text: 'Adult Fiction',
-                              style: TextStyle(
-                                  color: Color(0XFFFFFFFF),
-                                  fontSize: 14,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w500),
-                            ),
-                          ]),
-                          // textAlign: TextAlign.left,
-                          ),
+                      Text.rich(
+                        TextSpan(
+                            text: 'Series', // Change the header text as needed
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFFFFFFFF),
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w300),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '/',
+                                style: TextStyle(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 16,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              TextSpan(
+                                text: 'Adult Fiction',
+                                style: TextStyle(
+                                    color: Color(0XFFFFFFFF),
+                                    fontSize: 14,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ]),
+                        // textAlign: TextAlign.left,
+                      ),
                     ])),
 
             // Trending movies grid view for the next set of movies
@@ -515,11 +630,23 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                 ),
                 itemBuilder: (context, index) {
                   final movie = adultFictionSeries[index]; // Offset index by 2
-                  return _buildTrendingMovieCard(
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MovieDetailScreen(
+                            movieImage: movie['imagePath']!,
+                          ),
+                        ),
+                      );
+                    },
+                  child: _buildTrendingMovieCard(
                     imagePath: movie['imagePath']!,
                     title: movie['title']!,
                     subtitle: movie['subtitle']!,
                     rating: movie['rating']!,
+                  ),
                   );
                 },
               ),
@@ -548,7 +675,10 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                             Color(0xFFFA3A60),
                             Color(0xFFFEBF40)
                           ]
-                        : [Colors.white, Colors.white, ])
+                        : [
+                            Colors.white,
+                            Colors.white,
+                          ])
                 .createShader(bounds);
           },
           child: Text(
@@ -769,7 +899,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Trailer', 
+                            'Trailer',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12,
@@ -852,7 +982,7 @@ Widget _buildSpecialContainer() {
       child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color:  Colors.transparent, // background color
+            color: Colors.transparent, // background color
             borderRadius: BorderRadiusDirectional.circular(4.0),
           ),
           child: ClipRRect(
@@ -860,8 +990,7 @@ Widget _buildSpecialContainer() {
                 topLeft: Radius.circular(4.0),
                 topRight: Radius.circular(4.0),
               ),
-              child: Column(
-                children: [
+              child: Column(children: [
                 Container(
                   width: 350,
                   height: 185,

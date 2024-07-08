@@ -26,7 +26,8 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                 ),
               ),
               child: AppBar(
-                title: Row(children: [
+                title: Row(
+                  children: [
                   Image.asset(
                     'assets/images/Vector (5).png', // Replace with your image asset path
                     height: 20,
@@ -145,7 +146,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Container(
               width: 328, // Adjust the width of the container here
-              height: 508,
+              height: 467,
               decoration: BoxDecoration(
                 color: Color(0xFF383838),
                 borderRadius: BorderRadius.circular(4.0),
@@ -203,25 +204,13 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
+                                   decoration:
+                                TextDecoration.underline, // Underline the text
+                            decorationColor:
+                                Color(0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
-                            SizedBox(width:8), // Add space between the text and the image
-                            Align(
-                                alignment: Alignment
-                                    .centerRight, // Align the image to the left
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 11.0, right: 30.0),
-                                  child: Image.asset(
-                                    'assets/images/Icon.png', // Replace with your image asset path
-                                    height:
-                                        10, // Adjust the height of the image here
-                                    width:
-                                        10, // Adjust the width of the image here
-                                    fit: BoxFit.cover,
-                                  ),
-                                )),
                           ],
                         ),
                         SizedBox(height: 12),
@@ -234,32 +223,12 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                        const SizedBox(height: 24),
-                        Row(
+                        Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4.0),
-                              child: Image.asset(
-                                'assets/images/Avatar.png', // Replace with your image asset path
-                                height:
-                                    40, // Adjust the height of the image here
-                                width: 40, // Adjust the width of the image here
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(width: 12),
+                            SizedBox(height: 24),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Olivia Ryhe',
-                                  style: TextStyle(
-                                    color: Color(0xFFDADADA),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14,
-                                  ),
-                                ),
                                 Text(
                                   '20 Jan 2022',
                                   style: TextStyle(
@@ -286,7 +255,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Container(
               width: 328, // Adjust the width of the container here
-              height: 508,
+              height: 467,
               decoration: BoxDecoration(
                 color: Color(0xFF383838),
                 borderRadius: BorderRadius.circular(4.0),
@@ -344,27 +313,13 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
+                                   decoration:
+                                TextDecoration.underline, // Underline the text
+                            decorationColor:
+                                Color(0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
-                            SizedBox(
-                                width:
-                                    8), // Add space between the text and the image
-                            Align(
-                                alignment: Alignment
-                                    .centerRight, // Align the image to the left
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 11.0, right: 30.0),
-                                  child: Image.asset(
-                                    'assets/images/Icon.png', // Replace with your image asset path
-                                    height:
-                                        10, // Adjust the height of the image here
-                                    width:
-                                        10, // Adjust the width of the image here
-                                    fit: BoxFit.cover,
-                                  ),
-                                )),
                           ],
                         ),
                         SizedBox(height: 12),
@@ -377,32 +332,12 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                        const SizedBox(height: 24),
-                        Row(
+                         Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4.0),
-                              child: Image.asset(
-                                'assets/images/Avatar.png', // Replace with your image asset path
-                                height:
-                                    40, // Adjust the height of the image here
-                                width: 40, // Adjust the width of the image here
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(width: 12),
+                            SizedBox(height: 24),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Olivia Ryhe',
-                                  style: TextStyle(
-                                    color: Color(0xFFDADADA),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14,
-                                  ),
-                                ),
                                 Text(
                                   '20 Jan 2022',
                                   style: TextStyle(
@@ -414,10 +349,12 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 ),
                               ],
                             ),
-                          ],
-                        ),
+                        
+                          ]
+                         )
                       ],
                     ),
+                    
                   ),
                 ],
               ),
@@ -509,7 +446,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Container(
               width: 328, // Adjust the width of the container here
-              height: 508,
+              height: 467,
               decoration: BoxDecoration(
                 color: Color(0xFF383838),
                 borderRadius: BorderRadius.circular(4.0),
@@ -567,28 +504,14 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
+                                     decoration:
+                                TextDecoration.underline, // Underline the text
+                            decorationColor:
+                                Color(0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
-                            SizedBox(
-                                width:
-                                    8), // Add space between the text and the image
-                            Align(
-                                alignment: Alignment
-                                    .centerRight, // Align the image to the left
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 11.0, right: 30.0),
-                                  child: Image.asset(
-                                    'assets/images/Icon.png', // Replace with your image asset path
-                                    height:
-                                        10, // Adjust the height of the image here
-                                    width:
-                                        10, // Adjust the width of the image here
-                                    fit: BoxFit.cover,
-                                  ),
-                                )
-                                ),
+                           
                           ],
                         ),
                         SizedBox(height: 12),
@@ -601,32 +524,14 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                        const SizedBox(height: 24),
-                        Row(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4.0),
-                              child: Image.asset(
-                                'assets/images/Avatar.png', // Replace with your image asset path
-                                height:
-                                    40, // Adjust the height of the image here
-                                width: 40, // Adjust the width of the image here
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            SizedBox(width: 12),
+                       
+                       
+                            
+                            SizedBox(height: 24),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Olivia Ryhe',
-                                  style: TextStyle(
-                                    color: Color(0xFFDADADA),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14,
-                                  ),
-                                ),
+                                
                                 Text(
                                   '20 Jan 2022',
                                   style: TextStyle(
@@ -638,14 +543,16 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 ),
                               ],
                             ),
-                          ],
-                        ),
+                          
+                        
                       ],
                     ),
                   ),
                 ],
               ),
+              
             ),
+            
           ),
           SizedBox(height: 24),
           Padding(
