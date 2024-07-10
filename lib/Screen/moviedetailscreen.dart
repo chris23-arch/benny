@@ -9,6 +9,44 @@ class MovieDetailScreen extends StatefulWidget {
 }
 
 class _MovieDetailScreenState extends State<MovieDetailScreen> {
+  TextEditingController _controller = TextEditingController();
+  FocusNode _focusNode = FocusNode();
+  bool _isTextFieldFocused = false;
+  bool _isButtonVisible = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Listen to text changes
+    _controller.addListener(() {
+      setState(() {
+        _isButtonVisible = _controller.text.isNotEmpty;
+      });
+    });
+
+    // Listen to focus changes
+    _focusNode.addListener(() {
+      setState(() {
+        _isTextFieldFocused = _focusNode.hasFocus;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _onSearchPressed() {
+    setState(() {
+      _isButtonVisible = false;
+    });
+    _focusNode.unfocus(); // Remove focus from the text field
+  }
+
   final List<String> moreImages = [
     'assets/images/Bridgerton-1 1.png',
     'assets/images/Bridgerton 1.png',
@@ -131,7 +169,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   '7.3',
                   style: TextStyle(
                       fontSize: 16,
-                      color: Colors.white,
+                      color: Color(0xFFFFFFFF),
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w500),
                 ),
@@ -412,12 +450,14 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               padEnds: false,
             ),
             items: movieImages.asMap().entries.map((entry) {
-      int index = entry.key;
-      String imagePath = entry.value;
-      return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
-          right: index == movieImages.length - 1 ? 16.0 : 12.0, // Add extra padding to the last item
-        ),
+              int index = entry.key;
+              String imagePath = entry.value;
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
+                  right: index == movieImages.length - 1
+                      ? 16.0
+                      : 12.0, // Add extra padding to the last item
+                ),
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(4.0),
                     child: Container(
@@ -491,13 +531,15 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               initialPage: 0,
               padEnds: false,
             ),
-               items: moreImages.asMap().entries.map((entry) {
-      int index = entry.key;
-      String imagePath = entry.value;
-      return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
-          right: index == moreImages.length - 1 ? 16.0 : 8.0, // Add extra padding to the last item
-        ),
+            items: moreImages.asMap().entries.map((entry) {
+              int index = entry.key;
+              String imagePath = entry.value;
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
+                  right: index == moreImages.length - 1
+                      ? 16.0
+                      : 8.0, // Add extra padding to the last item
+                ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(4.0),
                   child: Container(
@@ -531,7 +573,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               child: Text(
                 "Leave a review",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Color(0xFFFFFFFF),
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
@@ -543,52 +585,101 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         const SizedBox(height: 8),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 19.0),
-          child: Row(
+          child: Column(
             children: [
-              Expanded(
-                child: Container(
-                  height: 48, // Adjust height
-                  width: 328, // Adjust width
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Say something about the movie...',
-                      hintStyle: const TextStyle(
-                        color: Color(0XFFA7A7A7),
-                      ),
-                      suffixIcon: Icon(Icons.edit, color: Color(0XFFA7A7A7)),
-                      // contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                        borderSide: const BorderSide(
-                          color: Color(
-                              0xFF212020), // Set your desired border color here
-                          width: 2.0, // Set the width of the border
+              AnimatedContainer(
+                  duration: Duration(milliseconds: 300),
+                  height: _isTextFieldFocused
+                      ? 165.0
+                      : 50.0, // Change these values as needed
+                  child: Stack(
+                    children: [
+                    TextField(
+                      controller: _controller,
+                      maxLines: _isTextFieldFocused ? 5 : 1,
+                      focusNode: _focusNode,
+                      decoration: InputDecoration(
+                        hintText: 'Say something about the movie...',
+                        hintStyle: const TextStyle(
+                          color: Color(0XFF424242),
                         ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                        borderSide: const BorderSide(
-                          color: Colors
-                              .white, // Set the border color when the TextField is focused
-                          width: 2.0,
+                        
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                          borderSide: const BorderSide(
+                            color: Color(
+                                0xFF424242), // Set your desired border color here
+                            width: 1.0, // Set the width of the border
+                          ),
                         ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                        borderSide: const BorderSide(
-                          color: Color(
-                              0xFF747474), // Set the border color when the TextField is enabled
-                          width: 2.0,
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                          borderSide: const BorderSide(
+                            color: Color(0xFF424242), // Set the border color when the TextField is focused
+                            width: 1.0,
+                          ),
                         ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                          borderSide: const BorderSide(
+                            color: Color(
+                                0xFF424242), // Set the border color when the TextField is enabled
+                            width: 1.0,
+                          ),
+                        ),
+                        filled: true,
+                        fillColor: Color(0xFF1C1C1C),
                       ),
-                      filled: true,
-                      fillColor: Color(0xFF505050),
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
-                    style: const TextStyle(
-                      color: Colors.white,
+
+                    Positioned(
+                      right: 18,
+                      bottom: _isTextFieldFocused ? 120 : 14,
+                       child: Visibility(
+                    visible: !_isButtonVisible, // Make the icon invisible when the text field is focused
+                      child: Icon(Icons.edit, color: Color(0XFF424242)),
                     ),
+                    ),
+                  ]
                   ),
-                ),
+                  ),
+              SizedBox(height: 10),
+              Align(
+                alignment: Alignment.centerRight,
+                child: _isButtonVisible
+                    ? GestureDetector(
+                        onTap: _onSearchPressed,
+                        child: Container(
+                          alignment: Alignment.center,
+                          height: 40,
+                          width: 105,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            borderRadius: BorderRadius.circular(4.0),
+                          ),
+                          child: Text(
+                            'Post review',
+                            style: TextStyle(
+                              color: Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              fontFamily: "Roboto",
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ))
+                    : null,
               ),
             ],
           ),
@@ -640,7 +731,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         Column(children: [
           Container(
             width: 450, // Specify width here
-            height: 160, // Specify height here
+            height: 165, // Specify height here
             margin: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             padding: EdgeInsets.all(17),
             decoration: BoxDecoration(
@@ -706,10 +797,13 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                 Text(
                   'Lorem ipsum dolor sit amet consectetur. Aenean ut suspendisse vitae laoreet amet. Mattis nullam pharetra sed gravida amet ullamcorper. Amet ac elit at tortor fringilla ut nibh tincidunt purus. Condimentum eget lacinia lectus nibh sapien aenean.',
                   style: TextStyle(
-                      color: Color(0xFFFFFFFF),
-                      fontSize: 11,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400),
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 12,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                  ),
+                  textAlign: TextAlign.justify,
+                  
                 ),
               ],
             ),
@@ -718,7 +812,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
           // Custom container with text and icons
           Container(
             width: 450, // Specify width here
-            height: 160, // Specify height here
+            height: 165, // Specify height here
             margin: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             padding: EdgeInsets.all(17),
             decoration: BoxDecoration(
@@ -781,13 +875,16 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   ],
                 ),
                 SizedBox(height: 12),
-                Text(
+               Text(
                   'Lorem ipsum dolor sit amet consectetur. Aenean ut suspendisse vitae laoreet amet. Mattis nullam pharetra sed gravida amet ullamcorper. Amet ac elit at tortor fringilla ut nibh tincidunt purus. Condimentum eget lacinia lectus nibh sapien aenean.',
                   style: TextStyle(
-                      color: Color(0xFFFFFFFF),
-                      fontSize: 11,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400),
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 12,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                  ),
+                  textAlign: TextAlign.justify,
+                  
                 ),
               ],
             ),
@@ -796,7 +893,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
           // Custom container with text and icons
           Container(
             width: 450, // Specify width here
-            height: 160, // Specify height here
+            height: 165, // Specify height here
             margin: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             padding: EdgeInsets.all(17),
             decoration: BoxDecoration(
@@ -862,10 +959,13 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                 Text(
                   'Lorem ipsum dolor sit amet consectetur. Aenean ut suspendisse vitae laoreet amet. Mattis nullam pharetra sed gravida amet ullamcorper. Amet ac elit at tortor fringilla ut nibh tincidunt purus. Condimentum eget lacinia lectus nibh sapien aenean.',
                   style: TextStyle(
-                      color: Color(0xFFFFFFFF),
-                      fontSize: 11,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400),
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 12,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                  ),
+                  textAlign: TextAlign.justify,
+                  
                 ),
               ],
             ),
@@ -876,7 +976,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         // First Text with subtitle
         Container(
           padding: EdgeInsets.only(left: 16.0),
-          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, 
+          children: [
             Expanded(
               child: Text(
                 'Watch videos reviews and reaction',
@@ -905,12 +1006,14 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               padEnds: false,
             ),
             items: additionalImages.asMap().entries.map((entry) {
-      int index = entry.key;
-      String imagePath = entry.value;
-      return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
-          right: index == additionalImages.length - 1 ? 16.0 : 8.0, // Add extra padding to the last item
-        ),
+              int index = entry.key;
+              String imagePath = entry.value;
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0).copyWith(
+                  right: index == additionalImages.length - 1
+                      ? 16.0
+                      : 8.0, // Add extra padding to the last item
+                ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(4.0),
                   child: Container(
@@ -951,7 +1054,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                     'Fun Facts',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(0xFFFFFFFF),
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       fontFamily: 'Roboto',

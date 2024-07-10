@@ -849,7 +849,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                       style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 10,
-                        color: Colors.white,
+                        color: Color(0xFFFFFFFF),
                         fontFamily: 'Roboto',
                       ),
                     ),
@@ -1018,7 +1018,7 @@ Widget _buildSpecialContainer() {
                               'Take quiz and WIN',
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
-                                color: Colors.white,
+                                color: Color(0xFFFFFFFF),
                                 fontFamily: 'Roboto',
                                 fontSize: 14,
                               ),
@@ -1049,7 +1049,7 @@ Widget _buildSpecialContainer() {
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Colors.white,
+                                  color: Color(0xFFFFFFFF),
                                   fontFamily: 'Roboto',
                                 ),
                               ),

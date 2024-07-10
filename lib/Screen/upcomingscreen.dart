@@ -161,35 +161,35 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                         decoration: InputDecoration(
                           hintText: 'Avatar',
                           hintStyle: const TextStyle(
-                            color: Color(0XFFA7A7A7),
+                            color: Color(0XFF505050),
                           ),
                           prefixIcon:
-                              Icon(Icons.search, color: Color(0XFFA7A7A7)),
+                              Icon(Icons.search, color: Color(0XFF505050)),
                           // contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(11.0),
                              borderSide: const BorderSide(
-                  color: Color(0xFF212020), // Set your desired border color here
+                  color: Color(0xFF505050), // Set your desired border color here
                   width: 1.0, // Set the width of the border
                 ),
               ),
                focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(11.0),
                 borderSide: const BorderSide(
-                  color: Colors.white, // Set the border color when the TextField is focused
+                  color: Color(0xFF505050), // Set the border color when the TextField is focused
                   width: 2.0,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(11.0),
                 borderSide: const BorderSide(
-                  color: Color(0xFF747474), // Set the border color when the TextField is enabled
+                  color: Color(0xFF505050), // Set the border color when the TextField is enabled
                   width: 2.0,
                 )
                 
                           ),
                           filled: true,
-                          fillColor: Color(0xFF505050),
+                          fillColor: Color(0xFF212020),
                         ),
                         style: const TextStyle(
                           color: Colors.white,
