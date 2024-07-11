@@ -1,4 +1,4 @@
-import 'package:benny/Screen/moviedetailscreen.dart';
+import 'package:benny/Screen/moviehomedetailscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

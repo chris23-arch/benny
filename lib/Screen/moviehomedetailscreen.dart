@@ -126,7 +126,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                 ],
               ))),
       body: SingleChildScrollView(
-          child: Column(children: [
+          child: Column(
+            children: [
         Image.asset(
           'assets/images/Group 525.png', // Replace with your image asset path
           width: MediaQuery.of(context).size.width, // Full width of the screen
@@ -337,7 +338,10 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                        )))),
+                        )
+                        )
+                        )
+                        ),
               ),
 
               SizedBox(width: 12), // Space between containers
