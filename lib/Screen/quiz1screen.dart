@@ -1,14 +1,15 @@
-import 'package:benny/Screen/quiz1screen.dart';
+
+import 'package:benny/Screen/quiz2screen.dart';
 import 'package:flutter/material.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class Quiz1Screen extends StatefulWidget {
+  const Quiz1Screen({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<Quiz1Screen> createState() => _Quiz1ScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _Quiz1ScreenState extends State<Quiz1Screen> {
   // Tracks which container is clicked
   int? _selectedContainer;
 
@@ -17,12 +18,11 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _selectedContainer = index;
     });
-    if (index == 3) {
-      // Update to the correct index for "Mr Spock"
-      // Navigate to another screen when "Mr Spock" is clicked
+     if (index == 1) { // Update to the correct index for "Mr Spock"
+           // Navigate to another screen when "Mr Spock" is clicked
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Quiz1Screen()),
+        MaterialPageRoute(builder: (context) => Quiz2Screen()),
       );
     }
   }
@@ -64,13 +64,12 @@ class _QuizScreenState extends State<QuizScreen> {
       body: Padding(
         padding: EdgeInsets.all(16.0), // Add padding around the text
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start, // Align text to the left
+          crossAxisAlignment: CrossAxisAlignment.start, // Align text to the left
           children: [
             Padding(
               padding: EdgeInsets.only(left: 16.0),
               child: Text(
-                'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
+                'Which Bridgerton character\npromises to stand between\nheaven and earth for their\nspouse?',
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Inter",
@@ -79,20 +78,14 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
               ),
             ),
-            // cha odumodu with the flow sage rant and the overload for the pole na my back dem talk like say them gbas
-            //them no know say odumodu na reload  i de bomb like say everybody de on the low on the floor on the sand
-            // highness na for who never catch the cold bomb on a low do am on a low go to low odumodu na wetin them de reload
-            //  brrr focus on the money catch the journey me i no de honey na why dem de call me hodson odoi
-            // ok u de joke u go think na play de play we de row
-            SizedBox(
-                height: 66), // Add spacing between the text and the container
-            _buildOptionContainer(0, 'Mr Marvel'),
+            SizedBox(height: 66), // Add spacing between the text and the container
+            _buildOptionContainer(0, 'Colin Bridgerton'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(1, 'Commander Zhao'),
+            _buildOptionContainer(1, 'Lady Danbury'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(2, 'Avatar Korra'),
+            _buildOptionContainer(2, 'Cressida Cowper'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(3, 'Mr Spock'),
+            _buildOptionContainer(3, 'Queen Charlotte'),
           ],
         ),
       ),
@@ -111,14 +104,13 @@ class _QuizScreenState extends State<QuizScreen> {
           height: 63.0, // Specify the height of the container
           decoration: BoxDecoration(
             color: _selectedContainer == index
-                ? (index == 3 ? Colors.green : Colors.red)
+                ? (index == 1 ? Colors.green : Colors.red)
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
           ),
           padding: EdgeInsets.all(16.0), // Add padding inside the container
           child: Row(
-            crossAxisAlignment:
-                CrossAxisAlignment.center, // Center text vertically
+            crossAxisAlignment: CrossAxisAlignment.center, // Center text vertically
             children: [
               Text(
                 '${index + 1}.',

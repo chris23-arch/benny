@@ -132,7 +132,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       ),
                       style: const TextStyle(
                         color: Colors.white,
-                      ),
+                      ),      
                     ),
                   ),
                 ),
@@ -146,12 +146,12 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
             child: Container(
               width: 328, // Adjust the width of the container here
               height: 467,
-              decoration: BoxDecoration(
-                color: Color(0xFF383838),
+              decoration: BoxDecoration(                                 
+                color: Color(0xFF383838),   
                 borderRadius: BorderRadius.circular(4.0),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,         
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.only(
