@@ -17,15 +17,13 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _selectedContainer = index;
     });
-    if (index == 3) {
-      // Update to the correct index for "Mr Spock"
-      // Navigate to another screen when "Mr Spock" is clicked
-      Navigator.push(
+      // Navigate to another screen when any container is clicked
+       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => Quiz1Screen()),
       );
     }
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +82,7 @@ class _QuizScreenState extends State<QuizScreen> {
             // highness na for who never catch the cold bomb on a low do am on a low go to low odumodu na wetin them de reload
             //  brrr focus on the money catch the journey me i no de honey na why dem de call me hodson odoi
             // ok u de joke u go think na play de play we de row
+            // turn around play like eko for the hotel for edo na there dem pack them dem say dem neva knack
             SizedBox(
                 height: 66), // Add spacing between the text and the container
             _buildOptionContainer(0, 'Mr Marvel'),

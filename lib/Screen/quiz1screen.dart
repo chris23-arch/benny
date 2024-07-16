@@ -18,14 +18,13 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
     setState(() {
       _selectedContainer = index;
     });
-     if (index == 1) { // Update to the correct index for "Mr Spock"
-           // Navigate to another screen when "Mr Spock" is clicked
+      // Navigate to another screen when any container is clicked
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => Quiz2Screen()),
       );
     }
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +103,7 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
           height: 63.0, // Specify the height of the container
           decoration: BoxDecoration(
             color: _selectedContainer == index
-                ? (index == 1 ? Colors.green : Colors.red)
+                ? (index == 3 ? Colors.green : Colors.red)
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
           ),

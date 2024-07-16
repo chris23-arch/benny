@@ -19,14 +19,13 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
     setState(() {
       _selectedContainer = index;
     });
-     if (index == 1) { // Update to the correct index for "Mr Spock"
-           // Navigate to another screen when "Mr Spock" is clicked
+ // Navigate to another screen when any container is clicked
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => QuizWinScreen()),
       );
     } 
-  }
+  
 
   @override
   Widget build(BuildContext context) {
