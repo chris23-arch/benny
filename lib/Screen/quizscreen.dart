@@ -76,13 +76,9 @@ class _QuizScreenState extends State<QuizScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              
             ),
-            // cha odumodu with the flow sage rant and the overload for the pole na my back dem talk like say them gbas
-            //them no know say odumodu na reload  i de bomb like say everybody de on the low on the floor on the sand
-            // highness na for who never catch the cold bomb on a low do am on a low go to low odumodu na wetin them de reload
-            //  brrr focus on the money catch the journey me i no de honey na why dem de call me hodson odoi
-            // ok u de joke u go think na play de play we de row
-            // turn around play like eko for the hotel for edo na there dem pack them dem say dem neva knack
+           
             SizedBox(
                 height: 66), // Add spacing between the text and the container
             _buildOptionContainer(0, 'Mr Marvel'),

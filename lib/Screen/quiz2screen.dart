@@ -1,4 +1,5 @@
 
+import 'package:benny/Screen/mainscreen.dart';
 import 'package:benny/Screen/quiz2screen.dart';
 import 'package:benny/Screen/quizwinscreen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
  // Navigate to another screen when any container is clicked
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => QuizWinScreen()),
+        MaterialPageRoute(builder: (context) => MainScreen()),
       );
     } 
   
@@ -69,7 +70,7 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
             Padding(
               padding: EdgeInsets.only(left: 16.0),
               child: Text(
-                'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
+                'How old is Charlotte\nwhen she becomes\nqueen?',
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Inter",
@@ -79,13 +80,13 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
               ),
             ),
             SizedBox(height: 66), // Add spacing between the text and the container
-            _buildOptionContainer(0, 'Miss Marvel'),
+            _buildOptionContainer(0, '17'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(1, 'Commander Zuko'),
+            _buildOptionContainer(1, '16'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(2, 'Avatar Aang'),
+            _buildOptionContainer(2, '18'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(3, 'Mr Stack'),
+            _buildOptionContainer(3, '19'),
           ],
         ),
       ),
@@ -104,7 +105,7 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
           height: 63.0, // Specify the height of the container
           decoration: BoxDecoration(
             color: _selectedContainer == index
-                ? (index == 1 ? Colors.green : Colors.red)
+                ? (index == 0 ? Colors.green : Colors.red)
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
           ),

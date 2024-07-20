@@ -1,6 +1,6 @@
+import 'package:benny/Screen/leaderboardscreen.dart';
 import 'package:benny/Screen/quizscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class QuizWinScreen extends StatefulWidget {
   const QuizWinScreen({super.key});
@@ -601,7 +601,14 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                       SizedBox(
                           height:
                               15), // Add spacing of 20 between the two containers
-                      Container(
+                               GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LeaderBoardScreen()),
+            );
+          },
+                      child: Container(
                         width: 355,
                         height: 40, // Set the height of the new container
                         decoration: BoxDecoration(
@@ -628,6 +635,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                             borderRadius: BorderRadius.circular(4.0),
                           ),
                           child: Center(
+                            
                             child: ShaderMask(
                               shaderCallback: (Rect bounds) {
                                 return LinearGradient(
@@ -650,6 +658,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                   fontFamily: 'Roboto',
                                 ),
                               ),
+                            ) 
                             ),
                           ),
                         ),

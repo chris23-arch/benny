@@ -82,9 +82,9 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
             SizedBox(height: 24), // Add spacing between containers
             _buildOptionContainer(1, 'Lady Danbury'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(2, 'Cressida Cowper'),
+            _buildOptionContainer(2, 'Queen Charlotte'),
             SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(3, 'Queen Charlotte'),
+            _buildOptionContainer(3, 'Cressida Cowper'),
           ],
         ),
       ),
@@ -103,7 +103,7 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
           height: 63.0, // Specify the height of the container
           decoration: BoxDecoration(
             color: _selectedContainer == index
-                ? (index == 3 ? Colors.green : Colors.red)
+                ? (index == 2 ? Colors.green : Colors.red)
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
           ),
