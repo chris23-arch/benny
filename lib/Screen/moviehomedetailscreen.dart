@@ -126,8 +126,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                 ],
               ))),
       body: SingleChildScrollView(
-          child: Column(
-            children: [
+          child: Column(children: [
         Image.asset(
           'assets/images/Group 525.png', // Replace with your image asset path
           width: MediaQuery.of(context).size.width, // Full width of the screen
@@ -338,10 +337,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                        )
-                        )
-                        )
-                        ),
+                        )))),
               ),
 
               SizedBox(width: 12), // Space between containers
@@ -592,64 +588,62 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
           child: Column(
             children: [
               AnimatedContainer(
-                  duration: Duration(milliseconds: 300),
-                  height: _isTextFieldFocused
-                      ? 165.0
-                      : 50.0, // Change these values as needed
-                  child: Stack(
-                    children: [
-                    TextField(
-                      controller: _controller,
-                      maxLines: _isTextFieldFocused ? 5 : 1,
-                      focusNode: _focusNode,
-                      decoration: InputDecoration(
-                        hintText: 'Say something about the movie...',
-                        hintStyle: const TextStyle(
-                          color: Color(0XFF424242),
-                        ),
-                        
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                          borderSide: const BorderSide(
-                            color: Color(
-                                0xFF424242), // Set your desired border color here
-                            width: 1.0, // Set the width of the border
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                          borderSide: const BorderSide(
-                            color: Color(0xFF424242), // Set the border color when the TextField is focused
-                            width: 1.0,
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                          borderSide: const BorderSide(
-                            color: Color(
-                                0xFF424242), // Set the border color when the TextField is enabled
-                            width: 1.0,
-                          ),
-                        ),
-                        filled: true,
-                        fillColor: Color(0xFF1C1C1C),
+                duration: Duration(milliseconds: 300),
+                height: _isTextFieldFocused
+                    ? 165.0
+                    : 50.0, // Change these values as needed
+                child: Stack(children: [
+                  TextField(
+                    controller: _controller,
+                    maxLines: _isTextFieldFocused ? 5 : 1,
+                    focusNode: _focusNode,
+                    decoration: InputDecoration(
+                      hintText: 'Say something about the movie...',
+                      hintStyle: const TextStyle(
+                        color: Color(0XFF424242),
                       ),
-                      style: const TextStyle(
-                        color: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                        borderSide: const BorderSide(
+                          color: Color(
+                              0xFF424242), // Set your desired border color here
+                          width: 1.0, // Set the width of the border
+                        ),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                        borderSide: const BorderSide(
+                          color: Color(
+                              0xFF424242), // Set the border color when the TextField is focused
+                          width: 1.0,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                        borderSide: const BorderSide(
+                          color: Color(
+                              0xFF424242), // Set the border color when the TextField is enabled
+                          width: 1.0,
+                        ),
+                      ),
+                      filled: true,
+                      fillColor: Color(0xFF1C1C1C),
                     ),
-
-                    Positioned(
-                      right: 18,
-                      bottom: _isTextFieldFocused ? 120 : 14,
-                       child: Visibility(
-                    visible: !_isButtonVisible, // Make the icon invisible when the text field is focused
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Positioned(
+                    right: 18,
+                    bottom: _isTextFieldFocused ? 120 : 14,
+                    child: Visibility(
+                      visible:
+                          !_isButtonVisible, // Make the icon invisible when the text field is focused
                       child: Icon(Icons.edit, color: Color(0XFF424242)),
                     ),
-                    ),
-                  ]
                   ),
-                  ),
+                ]),
+              ),
               SizedBox(height: 10),
               Align(
                 alignment: Alignment.centerRight,
@@ -807,88 +801,6 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.justify,
-                  
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 12),
-          // Custom container with text and icons
-          Container(
-            width: 450, // Specify width here
-            height: 165, // Specify height here
-            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
-            padding: EdgeInsets.all(17),
-            decoration: BoxDecoration(
-              color: Color(0xFF2A2A2A), // Background color
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/Ellipse 1.png', // Replace with your image path
-                      width: 30,
-                      height: 30,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(width: 12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Jane Doe',
-                          style: TextStyle(
-                            color: Color(0xFFFFFFFF),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'Roboto',
-                          ),
-                        ),
-                        Text(
-                          '06/07',
-                          style: TextStyle(
-                            color: Color(0xFF9F9F9F),
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'Roboto',
-                          ),
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/Vector (7).png', // Replace with your like icon path
-                          width: 18,
-                          height: 21,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: 10),
-                        Image.asset(
-                          'assets/images/Vector (8).png', // Replace with your share icon path
-                          width: 19,
-                          height: 19,
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: 12),
-               Text(
-                  'Lorem ipsum dolor sit amet consectetur. Aenean ut suspendisse vitae laoreet amet. Mattis nullam pharetra sed gravida amet ullamcorper. Amet ac elit at tortor fringilla ut nibh tincidunt purus. Condimentum eget lacinia lectus nibh sapien aenean.',
-                  style: TextStyle(
-                    color: Color(0xFFFFFFFF),
-                    fontSize: 12,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w400,
-                  ),
-                  textAlign: TextAlign.justify,
-                  
                 ),
               ],
             ),
@@ -969,7 +881,86 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.justify,
-                  
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 12),
+          // Custom container with text and icons
+          Container(
+            width: 450, // Specify width here
+            height: 165, // Specify height here
+            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+            padding: EdgeInsets.all(17),
+            decoration: BoxDecoration(
+              color: Color(0xFF2A2A2A), // Background color
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/images/Ellipse 1.png', // Replace with your image path
+                      width: 30,
+                      height: 30,
+                      fit: BoxFit.cover,
+                    ),
+                    SizedBox(width: 12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Jane Doe',
+                          style: TextStyle(
+                            color: Color(0xFFFFFFFF),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: 'Roboto',
+                          ),
+                        ),
+                        Text(
+                          '06/07',
+                          style: TextStyle(
+                            color: Color(0xFF9F9F9F),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: 'Roboto',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/Vector (7).png', // Replace with your like icon path
+                          width: 18,
+                          height: 21,
+                          color: Colors.white,
+                        ),
+                        SizedBox(width: 10),
+                        Image.asset(
+                          'assets/images/Vector (8).png', // Replace with your share icon path
+                          width: 19,
+                          height: 19,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 12),
+                Text(
+                  'Lorem ipsum dolor sit amet consectetur. Aenean ut suspendisse vitae laoreet amet. Mattis nullam pharetra sed gravida amet ullamcorper. Amet ac elit at tortor fringilla ut nibh tincidunt purus. Condimentum eget lacinia lectus nibh sapien aenean.',
+                  style: TextStyle(
+                    color: Color(0xFFFFFFFF),
+                    fontSize: 12,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                  ),
+                  textAlign: TextAlign.justify,
                 ),
               ],
             ),
@@ -980,8 +971,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         // First Text with subtitle
         Container(
           padding: EdgeInsets.only(left: 16.0),
-          child: Row(crossAxisAlignment: CrossAxisAlignment.start, 
-          children: [
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(
               child: Text(
                 'Watch videos reviews and reaction',

@@ -76,7 +76,6 @@ class _QuizScreenState extends State<QuizScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              
             ),
            
             SizedBox(
