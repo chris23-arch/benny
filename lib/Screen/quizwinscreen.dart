@@ -669,7 +669,8 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                 ],
               ),
             ),
-          ]),
+          ]
+          ),
       backgroundColor: Color(0xFF121212),
     );
   }

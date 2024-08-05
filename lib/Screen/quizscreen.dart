@@ -9,6 +9,32 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  late ScrollController _controller;
+
+  bool _showTitle = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = ScrollController();
+    _controller.addListener(_onScroll);
+  }
+
+  @override
+  void dispose() {
+    _controller.removeListener(_onScroll);
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    if (_controller.offset > 10 && _showTitle) {
+      setState(() => _showTitle = false);
+    } else if (_controller.offset <= 10 && !_showTitle) {
+      setState(() => _showTitle = true);
+    }
+  }
+
   // Tracks which container is clicked
   int? _selectedContainer;
 
@@ -17,79 +43,110 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _selectedContainer = index;
     });
-      // Navigate to another screen when any container is clicked
-       Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Quiz1Screen()),
-      );
-    }
-  
+    // Navigate to another screen when any container is clicked
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Quiz1Screen()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(150),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF121212),
-                Color(0xFF383838),
-                Color(0xFF5A5A5A),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: AppBar(
-            leading: GestureDetector(
-              onTap: () {
-                // Handle back navigation to movie home screen
-                Navigator.pop(context);
-              },
-              child: Image.asset(
+      body: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
+          controller: _controller,
+          slivers: [
+            SliverAppBar(
+              backgroundColor: const Color(0xFF121212),
+              expandedHeight: 180.0,
+              leading: Image.asset(
                 'assets/images/Vector (5).png', // Replace with your image asset path
-                height: 20,
-                width: 18,
+                height: 21.02,
+                width: 11.26,
               ),
-            ),
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-          ),
-        ),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0), // Add padding around the text
-        child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start, // Align text to the left
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 16.0),
-              child: Text(
-                'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: "Inter",
-                  color: Color(0xFFFFFFFF),
-                  fontWeight: FontWeight.w600,
+              // title: const Text(
+              //   "Quiz and Win",
+              //   style: TextStyle(
+              //     color: Color(0xFFFFFFFF),
+              //     fontSize: 16,
+              //     fontWeight: FontWeight.w500,
+              //     fontFamily: "Roboto",
+              //   ),
+              // ),
+              // actions: [
+              //   IconButton(
+              //     onPressed: () {},
+              //     icon: Image.asset(
+              //       'assets/images/Vector (3).png', // Replace with your image asset path
+              //       height: 20.0,
+              //       width: 18.0,
+              //     ),
+              //   )
+              // ],
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/images/4553888_19629 2.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned(
+                        left: 16,
+                        bottom: 10.0,
+                        child: Text(
+                          "Question 1/5",
+                          style: TextStyle(
+                            color: Color(0xFFFFFFFF),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "Inter",
+                          ),
+                        ))
+                  ],
                 ),
               ),
             ),
-           
-            SizedBox(
-                height: 66), // Add spacing between the text and the container
-            _buildOptionContainer(0, 'Mr Marvel'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(1, 'Commander Zhao'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(2, 'Avatar Korra'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(3, 'Mr Spock'),
-          ],
-        ),
-      ),
+            //  SliverOverlapInjector(handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context)),
+            SliverList(
+                delegate: SliverChildListDelegate([
+              Padding(
+                padding: EdgeInsets.all(16.0), // Add padding around the text
+                child: Column(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Align text to the left
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16.0, top: 0),
+                      child: Text(
+                        'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Inter",
+                          color: Color(0xFFFFFFFF),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                        height:
+                            66), // Add spacing between the text and the container
+                    _buildOptionContainer(0, 'Mr Marvel'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(1, 'Commander Zhao'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(2, 'Avatar Korra'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(3, 'Mr Spock'),
+                  ],
+                ),
+              ),
+            ]))
+          ]),
       backgroundColor: Color(0xFF121212),
     );
   }

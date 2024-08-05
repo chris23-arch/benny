@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LeaderBoardScreen extends StatefulWidget {
   const LeaderBoardScreen({super.key});
@@ -113,245 +114,979 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
             ),
           ),
           SizedBox(height: 48),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
-                        Transform.translate(
-                          offset: const Offset(7, 44),
-                          child: Image.asset(
-                            'assets/images/Mask Group.png', // Replace with your image asset path
-                            height: 56,
-                            width: 56,
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: const Offset(15, 63),
-                          child: const Text(
-                            'Alena Donin',
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Rubik",
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Transform.translate(
-                          offset: const Offset(0, 7),
-                          child: Image.asset(
-                            'assets/images/Mask Group (1).png', // Replace with your image asset path
-                            height: 56,
-                            width: 56,
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: const Offset(0, 23),
-                          child: const Text(
-                            'Davis Curtis',
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Rubik",
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Transform.translate(
-                          offset: const Offset(-9, 70),
-                          child: Image.asset(
-                            'assets/images/Avatar (1).png', // Replace with your image asset path
-                            height: 56,
-                            width: 56,
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: const Offset(-9, 90),
-                          child: const Text(
-                            'Craig Gouse',
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Rubik",
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
+          Column(children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Transform.translate(
-                    offset: const Offset(63, 50), // Move right
-                    child: Container(
-                      width: 70,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFA4E5B),
-                        borderRadius:
-                            BorderRadius.circular(12), // Add border radius
+                  Column(
+                    children: [
+                      Transform.translate(
+                        offset: const Offset(7, 44),
+                        child: Image.asset(
+                          'assets/images/Mask Group.png', // Replace with your image asset path
+                          height: 56,
+                          width: 56,
+                        ),
                       ),
-                      child: const Center(
-                        child: Text(
-                          '1,469 QP',
+                      Transform.translate(
+                        offset: const Offset(15, 63),
+                        child: const Text(
+                          'Alena Donin',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
-                            fontSize: 12,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             fontFamily: "Rubik",
                           ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                  Transform.translate(
-                    offset: const Offset(0, 10), // Move right
-                    child: Container(
-                      width: 70,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFEBF40),
-                        borderRadius:
-                            BorderRadius.circular(12), // Add border radius
+                  Column(
+                    children: [
+                      Transform.translate(
+                        offset: const Offset(0, 7),
+                        child: Image.asset(
+                          'assets/images/Mask Group (1).png', // Replace with your image asset path
+                          height: 56,
+                          width: 56,
+                        ),
                       ),
-                      child: const Center(
-                        child: Text(
-                          '2,569 QP',
+                      Transform.translate(
+                        offset: const Offset(0, 23),
+                        child: const Text(
+                          'Davis Curtis',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
-                            fontSize: 12,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             fontFamily: "Rubik",
                           ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                  Transform.translate(
-                    offset: const Offset(-63, 80), // Move right
-                    child: Container(
-                      width: 70,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFF8C4B),
-                        borderRadius:
-                            BorderRadius.circular(12), // Add border radius
+                  Column(
+                    children: [
+                      Transform.translate(
+                        offset: const Offset(-9, 70),
+                        child: Image.asset(
+                          'assets/images/Avatar (1).png', // Replace with your image asset path
+                          height: 56,
+                          width: 56,
+                        ),
                       ),
-                      child: const Center(
-                        child: Text(
-                          '1,053 QP',
+                      Transform.translate(
+                        offset: const Offset(-9, 90),
+                        child: const Text(
+                          'Craig Gouse',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
-                            fontSize: 12,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             fontFamily: "Rubik",
                           ),
                         ),
                       ),
-                    ),
-                  )
+                    ],
+                  ),
                 ],
               ),
-              const SizedBox(height: 20),
-              Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Transform.translate(
+                  offset: const Offset(63, 50), // Move right
+                  child: Container(
+                    width: 70,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFA4E5B),
+                      borderRadius:
+                          BorderRadius.circular(12), // Add border radius
+                    ),
+                    child: const Center(
+                      child: Text(
+                        '1,469 QP',
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Rubik",
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: const Offset(0, 10), // Move right
+                  child: Container(
+                    width: 70,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFEBF40),
+                      borderRadius:
+                          BorderRadius.circular(12), // Add border radius
+                    ),
+                    child: const Center(
+                      child: Text(
+                        '2,569 QP',
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Rubik",
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: const Offset(-63, 80), // Move right
+                  child: Container(
+                    width: 70,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFF8C4B),
+                      borderRadius:
+                          BorderRadius.circular(12), // Add border radius
+                    ),
+                    child: const Center(
+                      child: Text(
+                        '1,053 QP',
+                        style: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Rubik",
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Transform.translate(
-                        offset: const Offset(35, -4), // Move right
-                        child: SizedBox(
-                          height: 180, // Set your desired height
-                          width: 98, // Set your desired width
-                          child: Image.asset(
-                            'assets/images/Rank.png', // Replace with your image asset path
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 16, top: 15),
+                          child: SizedBox(
+                            height: 180, // Set your desired height
+                            //  width: 115, // Set your desired width
+                            child: Image.asset(
+                              'assets/images/Rank.png', // Replace with your image asset path
+                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 36, top: 0),
+                      Expanded(
                         child: SizedBox(
                           height: 262, // Set your desired height
-                          width: 110, // Set your desired width
+                          width: 135, // Set your desired width
                           child: Image.asset(
                             'assets/images/Rank (1).png', // Replace with your image asset path
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 0.3, top: 53),
-                        child: SizedBox(
-                          height: 180, // Set your desired height
-                          width: 98, // Set your desired width
-                          child: Image.asset(
-                            'assets/images/Rank (2).png', // Replace with your image asset path
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 16, top: 70),
+                          child: SizedBox(
+                            height: 180, // Set your desired height
+                            // width: 115, // Set your desired width
+                            child: Image.asset(
+                              'assets/images/Rank (2).png', // Replace with your image asset path
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                Stack(children: [
-                  Transform.translate(
-                    offset: Offset(0, -90),
-                    child: Container(
-                      // Full width of the screen
-                      width: double.maxFinite,
-                      height: 832, // Set your desired height
-                      decoration: BoxDecoration(
-                        color: Color(0xFF212020), // Set your desired color
-                        borderRadius: BorderRadius.circular(16),
-                      ),
+                Transform.translate(
+                  offset: Offset(0, -90),
+                  child: Container(
+                    // Full width of the screen
+                    width: double.maxFinite,
+                    height: 832, // Set your desired height
+                    decoration: BoxDecoration(
+                      color: Color(0xFF212020), // Set your desired color
+                      borderRadius: BorderRadius.circular(16),
                     ),
                   ),
-                  Positioned(
-                    top:
-                        20, // Adjust this value as needed to position the container on top
-                    left:
-                        -5, // Adjust this value as needed to position the container
-                    right:
-                        0, // Adjust this value as needed to position the container
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                        width: 355, // Set the width of the container
-                        height: 104, // Set your desired height
-                        // margin: EdgeInsets.only(top: 0), // Move the container up
-                        decoration: BoxDecoration(
-                          color: Colors.green, // Set your desired color
-                          borderRadius: BorderRadius.circular(20),
+                ),
+                Transform.translate(
+                  offset: Offset(0, -900),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -972),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
                         ),
                       ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '5',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1020),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -1100),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // second
+                Transform.translate(
+                  offset: Offset(0, -1080),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                  )
-              ]
-              ),
-            ],
-          ),
-        ]
-        ),
-        ]
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -1148),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '6',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1197),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -1280),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // third
+                Transform.translate(
+                  offset: Offset(0, -1259),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -1329),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '7',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1376),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -1458),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                /// fourth
+                Transform.translate(
+                  offset: Offset(0, -1438),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -1510),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '8',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1558),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -1640),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                /// fifth
+                Transform.translate(
+                  offset: Offset(0, -1617),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -1686),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '9',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1736),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -1819),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                /// fifth
+                Transform.translate(
+                  offset: Offset(0, -1797),
+                  child: Container(
+                    width: 350,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-135, -1870),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            25.0), // Adjust the radius as needed
+                        child: Container(
+                          width: 30.0, // Adjust the width as needed
+                          height: 35.0, // Adjust the height as needed
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF9A1398),
+                                Color(0xFFFA3A60),
+                                Color(0xFFFEBF40)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 27.0, // Adjust the width as needed
+                        height: 32.0, // Adjust the height as needed
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(23.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              Color(0xFF9A1398),
+                              Color(0xFFFA3A60),
+                              Color(0xFFFEBF40)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ).createShader(bounds),
+                          child: Text(
+                            '10',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(-74, -1915),
+                  child: Image.asset(
+                    'assets/images/Avatar (2).png',
+                    width: 56.0, // Replace with your desired width
+                    height: 63.3, // Replace with your desired height
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(27, -2000),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                          height:
+                              24.87), // Adjust the height for proper alignment
+                      Text(
+                        'Madelyn Dias',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFFEFEFE),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 4.52), // Space between texts
+                      Text(
+                        '590 points',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFDADADA),
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 1.82), // Space between texts
+                      ShaderMask(
+                        shaderCallback: (bounds) => LinearGradient(
+                          colors: [
+                            Color(0xFF9A1398),
+                            Color(0xFFFA3A60),
+                            Color(0xFFFEBF40)
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Text(
+                          '20 movie tickets won!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ]),
+        ]),
       ),
-      )
     );
   }
 }

@@ -566,12 +566,12 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         ),
                       );
                     },
-                  child: _buildTrendingMovieCard(
-                    imagePath: movie['imagePath']!,
-                    title: movie['title']!,
-                    subtitle: movie['subtitle']!,
-                    rating: movie['rating']!,
-                  ),
+                    child: _buildTrendingMovieCard(
+                      imagePath: movie['imagePath']!,
+                      title: movie['title']!,
+                      subtitle: movie['subtitle']!,
+                      rating: movie['rating']!,
+                    ),
                   );
                 },
               ),
@@ -641,12 +641,12 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         ),
                       );
                     },
-                  child: _buildTrendingMovieCard(
-                    imagePath: movie['imagePath']!,
-                    title: movie['title']!,
-                    subtitle: movie['subtitle']!,
-                    rating: movie['rating']!,
-                  ),
+                    child: _buildTrendingMovieCard(
+                      imagePath: movie['imagePath']!,
+                      title: movie['title']!,
+                      subtitle: movie['subtitle']!,
+                      rating: movie['rating']!,
+                    ),
                   );
                 },
               ),

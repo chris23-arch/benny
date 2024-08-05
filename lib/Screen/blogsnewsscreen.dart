@@ -26,8 +26,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                 ),
               ),
               child: AppBar(
-                title: Row(
-                  children: [
+                title: Row(children: [
                   Image.asset(
                     'assets/images/Vector (5).png', // Replace with your image asset path
                     height: 20,
@@ -56,7 +55,6 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                   ),
                 ]),
                 elevation: 0,
-
                 backgroundColor: Colors.transparent,
                 actions: [
                   Padding(
@@ -115,7 +113,8 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(11.0),
                           borderSide: const BorderSide(
-                            color: Color(0xFF505050), // Set the border color when the TextField is focused
+                            color: Color(
+                                0xFF505050), // Set the border color when the TextField is focused
                             width: 2.0,
                           ),
                         ),
@@ -132,7 +131,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       ),
                       style: const TextStyle(
                         color: Colors.white,
-                      ),      
+                      ),
                     ),
                   ),
                 ),
@@ -146,12 +145,12 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
             child: Container(
               width: 328, // Adjust the width of the container here
               height: 467,
-              decoration: BoxDecoration(                                 
-                color: Color(0xFF383838),   
+              decoration: BoxDecoration(
+                color: Color(0xFF383838),
                 borderRadius: BorderRadius.circular(4.0),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,         
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.only(
@@ -203,10 +202,10 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
-                                   decoration:
-                                TextDecoration.underline, // Underline the text
-                            decorationColor:
-                                Color(0xFFFFFFFF), // Same color as the text
+                                  decoration: TextDecoration
+                                      .underline, // Underline the text
+                                  decorationColor: Color(
+                                      0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
@@ -312,10 +311,10 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
-                                   decoration:
-                                TextDecoration.underline, // Underline the text
-                            decorationColor:
-                                Color(0xFFFFFFFF), // Same color as the text
+                                  decoration: TextDecoration
+                                      .underline, // Underline the text
+                                  decorationColor: Color(
+                                      0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
@@ -331,29 +330,25 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                         Column(
-                          children: [
-                            SizedBox(height: 24),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '20 Jan 2022',
-                                  style: TextStyle(
-                                    color: Color(0xFFFFFFFF),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                  ),
+                        Column(children: [
+                          SizedBox(height: 24),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '20 Jan 2022',
+                                style: TextStyle(
+                                  color: Color(0xFFFFFFFF),
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
                                 ),
-                              ],
-                            ),
-                        
-                          ]
-                         )
+                              ),
+                            ],
+                          ),
+                        ])
                       ],
                     ),
-                    
                   ),
                 ],
               ),
@@ -503,14 +498,13 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,
-                                     decoration:
-                                TextDecoration.underline, // Underline the text
-                            decorationColor:
-                                Color(0xFFFFFFFF), // Same color as the text
+                                  decoration: TextDecoration
+                                      .underline, // Underline the text
+                                  decorationColor: Color(
+                                      0xFFFFFFFF), // Same color as the text
                                 ),
                               ),
                             ),
-                           
                           ],
                         ),
                         SizedBox(height: 12),
@@ -523,35 +517,27 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                       
-                       
-                            
-                            SizedBox(height: 24),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                
-                                Text(
-                                  '20 Jan 2022',
-                                  style: TextStyle(
-                                    color: Color(0xFFFFFFFF),
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ],
+                        SizedBox(height: 24),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '20 Jan 2022',
+                              style: TextStyle(
+                                color: Color(0xFFFFFFFF),
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                              ),
                             ),
-                          
-                        
+                          ],
+                        ),
                       ],
                     ),
                   ),
                 ],
               ),
-              
             ),
-            
           ),
           SizedBox(height: 24),
           Padding(
