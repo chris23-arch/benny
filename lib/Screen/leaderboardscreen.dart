@@ -113,7 +113,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
               ),
             ),
           ),
-          SizedBox(height: 48),
+          const SizedBox(height: 48),
           Column(children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -205,7 +205,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                     width: 70,
                     height: 34,
                     decoration: BoxDecoration(
-                      color: Color(0xFFFA4E5B),
+                      color: const Color(0xFFFA4E5B),
                       borderRadius:
                           BorderRadius.circular(12), // Add border radius
                     ),
@@ -228,7 +228,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                     width: 70,
                     height: 34,
                     decoration: BoxDecoration(
-                      color: Color(0xFFFEBF40),
+                      color: const Color(0xFFFEBF40),
                       borderRadius:
                           BorderRadius.circular(12), // Add border radius
                     ),
@@ -251,7 +251,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                     width: 70,
                     height: 34,
                     decoration: BoxDecoration(
-                      color: Color(0xFFFF8C4B),
+                      color: const Color(0xFFFF8C4B),
                       borderRadius:
                           BorderRadius.circular(12), // Add border radius
                     ),
@@ -282,7 +282,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.only(left: 16, top: 15),
+                          padding: const EdgeInsets.only(left: 16, top: 15),
                           child: SizedBox(
                             height: 180, // Set your desired height
                             //  width: 115, // Set your desired width
@@ -303,7 +303,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                       ),
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.only(right: 16, top: 70),
+                          padding: const EdgeInsets.only(right: 16, top: 70),
                           child: SizedBox(
                             height: 180, // Set your desired height
                             // width: 115, // Set your desired width
@@ -317,30 +317,30 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(0, -90),
+                  offset: const Offset(0, -90),
                   child: Container(
                     // Full width of the screen
                     width: double.maxFinite,
                     height: 832, // Set your desired height
                     decoration: BoxDecoration(
-                      color: Color(0xFF212020), // Set your desired color
+                      color: const Color(0xFF212020), // Set your desired color
                       borderRadius: BorderRadius.circular(16),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(0, -900),
+                  offset: const Offset(0, -900),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0xFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -972),
+                  offset: const Offset(-135, -972),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -350,7 +350,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -367,12 +367,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -381,7 +381,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '5',
                             style: TextStyle(
                               color: Colors.white,
@@ -396,7 +396,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1020),
+                  offset: const Offset(-74, -1020),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -404,14 +404,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -1100),
+                  offset: const Offset(27, -1100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -420,8 +420,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -430,9 +430,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -440,7 +440,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,
@@ -455,18 +455,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
 
                 // second
                 Transform.translate(
-                  offset: Offset(0, -1080),
+                  offset: const Offset(0, -1080),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0XFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -1148),
+                  offset: const Offset(-135, -1148),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -476,7 +476,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -493,12 +493,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -507,7 +507,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '6',
                             style: TextStyle(
                               color: Colors.white,
@@ -522,7 +522,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1197),
+                  offset: const Offset(-74, -1197),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -530,14 +530,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -1280),
+                  offset: const Offset(27, -1280),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -546,8 +546,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -556,9 +556,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -566,7 +566,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,
@@ -581,18 +581,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
 
                 // third
                 Transform.translate(
-                  offset: Offset(0, -1259),
+                  offset: const Offset(0, -1259),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0xFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -1329),
+                  offset: const Offset(-135, -1329),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -602,7 +602,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -619,12 +619,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -633,7 +633,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '7',
                             style: TextStyle(
                               color: Colors.white,
@@ -648,7 +648,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1376),
+                  offset: const Offset(-74, -1376),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -656,14 +656,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -1458),
+                  offset: const Offset(27, -1458),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -672,8 +672,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -682,9 +682,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -692,7 +692,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,
@@ -707,18 +707,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
 
                 /// fourth
                 Transform.translate(
-                  offset: Offset(0, -1438),
+                  offset: const Offset(0, -1438),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0xFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -1510),
+                  offset: const Offset(-135, -1510),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -728,7 +728,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -745,12 +745,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -759,7 +759,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '8',
                             style: TextStyle(
                               color: Colors.white,
@@ -774,7 +774,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1558),
+                  offset: const Offset(-74, -1558),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -782,14 +782,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -1640),
+                  offset: const Offset(27, -1640),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -798,8 +798,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -808,9 +808,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -818,7 +818,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,
@@ -833,18 +833,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
 
                 /// fifth
                 Transform.translate(
-                  offset: Offset(0, -1617),
+                  offset: const Offset(0, -1617),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0xFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -1686),
+                  offset: const Offset(-135, -1686),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -854,7 +854,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -871,12 +871,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -885,7 +885,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '9',
                             style: TextStyle(
                               color: Colors.white,
@@ -900,7 +900,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1736),
+                  offset: const Offset(-74, -1736),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -908,14 +908,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -1819),
+                  offset: const Offset(27, -1819),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -924,8 +924,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -934,9 +934,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -944,7 +944,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,
@@ -959,18 +959,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
 
                 /// fifth
                 Transform.translate(
-                  offset: Offset(0, -1797),
+                  offset: const Offset(0, -1797),
                   child: Container(
                     width: 350,
                     height: 104,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: const Color(0xFF333333),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-135, -1870),
+                  offset: const Offset(-135, -1870),
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -980,7 +980,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         child: Container(
                           width: 30.0, // Adjust the width as needed
                           height: 35.0, // Adjust the height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFF9A1398),
@@ -997,12 +997,12 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                         width: 27.0, // Adjust the width as needed
                         height: 32.0, // Adjust the height as needed
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: const Color(0xFF333333),
                           borderRadius: BorderRadius.circular(23.0),
                         ),
                         alignment: Alignment.center,
                         child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
+                          shaderCallback: (bounds) => const LinearGradient(
                             colors: [
                               Color(0xFF9A1398),
                               Color(0xFFFA3A60),
@@ -1011,7 +1011,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
                             '10',
                             style: TextStyle(
                               color: Colors.white,
@@ -1026,7 +1026,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(-74, -1915),
+                  offset: const Offset(-74, -1915),
                   child: Image.asset(
                     'assets/images/Avatar (2).png',
                     width: 56.0, // Replace with your desired width
@@ -1034,14 +1034,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset(27, -2000),
+                  offset: const Offset(27, -2000),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                           height:
                               24.87), // Adjust the height for proper alignment
-                      Text(
+                      const Text(
                         'Madelyn Dias',
                         style: TextStyle(
                           fontSize: 16,
@@ -1050,8 +1050,8 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 4.52), // Space between texts
-                      Text(
+                      const SizedBox(height: 4.52), // Space between texts
+                      const Text(
                         '590 points',
                         style: TextStyle(
                           fontSize: 14,
@@ -1060,9 +1060,9 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 1.82), // Space between texts
+                      const SizedBox(height: 1.82), // Space between texts
                       ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
+                        shaderCallback: (bounds) => const LinearGradient(
                           colors: [
                             Color(0xFF9A1398),
                             Color(0xFFFA3A60),
@@ -1070,7 +1070,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
                           ],
                           tileMode: TileMode.mirror,
                         ).createShader(bounds),
-                        child: Text(
+                        child: const Text(
                           '20 movie tickets won!',
                           style: TextStyle(
                             fontSize: 12,

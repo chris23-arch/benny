@@ -59,7 +59,7 @@ class _QuizScreenState extends State<QuizScreen> {
           slivers: [
             SliverAppBar(
               backgroundColor: const Color(0xFF121212),
-              expandedHeight: 180.0,
+              expandedHeight: 230.0,
               leading: Image.asset(
                 'assets/images/Vector (5).png', // Replace with your image asset path
                 height: 21.02,
@@ -96,7 +96,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     ),
                     Positioned(
                         left: 16,
-                        bottom: 10.0,
+                        bottom: 50.0,
                         child: Text(
                           "Question 1/5",
                           style: TextStyle(
@@ -105,7 +105,22 @@ class _QuizScreenState extends State<QuizScreen> {
                             fontWeight: FontWeight.w500,
                             fontFamily: "Inter",
                           ),
-                        ))
+                        )),
+                    Transform.translate(
+                      offset: Offset(0, 240), // Move the text up
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16.0),
+                        child: Text(
+                          'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "Inter",
+                            color: Color(0xFFFFFFFF),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -119,22 +134,25 @@ class _QuizScreenState extends State<QuizScreen> {
                   crossAxisAlignment:
                       CrossAxisAlignment.start, // Align text to the left
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 16.0, top: 0),
-                      child: Text(
-                        'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Inter",
-                          color: Color(0xFFFFFFFF),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
+                    // Transform.translate(
+                    //   offset: Offset(0, -23), // Move the text up
+                    //   child: Padding(
+                    //     padding: EdgeInsets.only(left: 16.0),
+                    //     child: Text(
+                    //       'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
+                    //       style: TextStyle(
+                    //         fontSize: 20,
+                    //         fontFamily: "Inter",
+                    //         color: Color(0xFFFFFFFF),
+                    //         fontWeight: FontWeight.w600,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
 
                     SizedBox(
                         height:
-                            66), // Add spacing between the text and the container
+                            58), // Add spacing between the text and the container
                     _buildOptionContainer(0, 'Mr Marvel'),
                     SizedBox(height: 24), // Add spacing between containers
                     _buildOptionContainer(1, 'Commander Zhao'),
