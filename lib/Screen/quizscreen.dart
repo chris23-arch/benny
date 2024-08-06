@@ -10,8 +10,8 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   late ScrollController _controller;
-
   bool _showTitle = true;
+  int? _selectedContainer;
 
   @override
   void initState() {
@@ -35,19 +35,18 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
-  // Tracks which container is clicked
-  int? _selectedContainer;
-
   // Method to handle container click
   void _onContainerTap(int index) {
     setState(() {
       _selectedContainer = index;
     });
     // Navigate to another screen when any container is clicked
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Quiz1Screen()),
-    );
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Quiz1Screen()),
+      );
+    });
   }
 
   @override
@@ -65,25 +64,6 @@ class _QuizScreenState extends State<QuizScreen> {
                 height: 21.02,
                 width: 11.26,
               ),
-              // title: const Text(
-              //   "Quiz and Win",
-              //   style: TextStyle(
-              //     color: Color(0xFFFFFFFF),
-              //     fontSize: 16,
-              //     fontWeight: FontWeight.w500,
-              //     fontFamily: "Roboto",
-              //   ),
-              // ),
-              // actions: [
-              //   IconButton(
-              //     onPressed: () {},
-              //     icon: Image.asset(
-              //       'assets/images/Vector (3).png', // Replace with your image asset path
-              //       height: 20.0,
-              //       width: 18.0,
-              //     ),
-              //   )
-              // ],
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 background: Stack(
@@ -95,25 +75,36 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                     ),
                     Positioned(
-                        left: 16,
-                        bottom: 50.0,
-                        child: Text(
-                          "Question 1/5",
-                          style: TextStyle(
-                            color: Color(0xFFFFFFFF),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "Inter",
-                          ),
-                        )),
+                      left: 23,
+                      bottom: 85.0,
+                      child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                                colors: [
+                                  Color(0xFF9A1398),
+                                  Color(0xFFFFFA3A60),
+                                  Color(0xFFFEBF40)
+                                ], // Define your gradient colors here
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              ).createShader(bounds),
+                          child: Text(
+                            "Question 1/5",
+                            style: TextStyle(
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Inter",
+                            ),
+                          )),
+                    ),
                     Transform.translate(
-                      offset: Offset(0, 240), // Move the text up
+                      offset: Offset(7, 189), // Move the text up
                       child: Padding(
                         padding: EdgeInsets.only(left: 16.0),
                         child: Text(
                           'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                             fontFamily: "Inter",
                             color: Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w600,
@@ -129,30 +120,14 @@ class _QuizScreenState extends State<QuizScreen> {
             SliverList(
                 delegate: SliverChildListDelegate([
               Padding(
-                padding: EdgeInsets.all(16.0), // Add padding around the text
+                padding: EdgeInsets.all(7.0), // Add padding around the text
                 child: Column(
                   crossAxisAlignment:
                       CrossAxisAlignment.start, // Align text to the left
                   children: [
-                    // Transform.translate(
-                    //   offset: Offset(0, -23), // Move the text up
-                    //   child: Padding(
-                    //     padding: EdgeInsets.only(left: 16.0),
-                    //     child: Text(
-                    //       'Which Star Trek character is\nSheldon Cooper of the Big Bang\nTheory`s favorite?',
-                    //       style: TextStyle(
-                    //         fontSize: 20,
-                    //         fontFamily: "Inter",
-                    //         color: Color(0xFFFFFFFF),
-                    //         fontWeight: FontWeight.w600,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
-
                     SizedBox(
                         height:
-                            58), // Add spacing between the text and the container
+                            66), // Add spacing between the text and the container
                     _buildOptionContainer(0, 'Mr Marvel'),
                     SizedBox(height: 24), // Add spacing between containers
                     _buildOptionContainer(1, 'Commander Zhao'),

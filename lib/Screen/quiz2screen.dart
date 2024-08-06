@@ -1,4 +1,3 @@
-
 import 'package:benny/Screen/mainscreen.dart';
 import 'package:benny/Screen/quiz2screen.dart';
 import 'package:benny/Screen/quizwinscreen.dart';
@@ -12,7 +11,33 @@ class Quiz2Screen extends StatefulWidget {
 }
 
 class _Quiz2ScreenState extends State<Quiz2Screen> {
-  // Tracks which container is clicked
+  late ScrollController _controller;
+
+  bool _showTitle = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = ScrollController();
+    _controller.addListener(_onScroll);
+  }
+
+  @override
+  void dispose() {
+    _controller.removeListener(_onScroll);
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    if (_controller.offset > 10 && _showTitle) {
+      setState(() => _showTitle = false);
+    } else if (_controller.offset <= 10 && !_showTitle) {
+      setState(() => _showTitle = true);
+    }
+  }
+
+  // Tracks which container is clicked5
   int? _selectedContainer;
 
   // Method to handle container click
@@ -20,76 +45,183 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
     setState(() {
       _selectedContainer = index;
     });
- // Navigate to another screen when any container is clicked
+
+
+// // Show Snackbar
+//     showModalBottomSheet(
+//       context: context,
+//       builder: (BuildContext context) {
+//         return Container(
+//           height: 200,
+//           color: Color(0xFF121212),
+//           child: Center(
+//             child: Column(
+//               mainAxisAlignment: MainAxisAlignment.center,
+//               children: <Widget>[
+//                 Text(
+//                   '+ 100 points',
+//                   style: TextStyle(
+//                     fontSize: 30,
+//                     fontWeight: FontWeight.bold,
+//                     color: Colors.pink,
+//                   ),
+//                 ),
+//                 SizedBox(height: 10),
+//                 Text(
+//                   'You have earned a badge',
+//                   style: TextStyle(
+//                     fontSize: 16,
+//                     color: Colors.white,
+//                   ),
+//                 ),
+//                 SizedBox(height: 10),
+//                 Icon(
+//                   Icons.star,
+//                   size: 50,
+//                   color: Colors.yellow,
+//                 ),
+//                 SizedBox(height: 10),
+//                 Text(
+//                   'TRAILBLAZER',
+//                   style: TextStyle(
+//                     fontSize: 20,
+//                     fontWeight: FontWeight.bold,
+//                     color: Colors.yellow,
+//                   ),
+//                 ),
+//                 SizedBox(height: 20),
+//                 ElevatedButton(
+//                   onPressed: () {
+//                     Navigator.pop(context);
+//                   },
+//                   child: Text('Continue'),
+//                   style: ElevatedButton.styleFrom(
+//                     backgroundColor: Colors.pink, // Background color
+//                     foregroundColor: Colors.white, // Text color
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         );
+//       },
+//     );
+
+
+
+
+
+
+
+
+
+
+  // Navigate to another screen when any container is clicked
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => MainScreen()),
+        MaterialPageRoute(builder: (context) => QuizWinScreen()),
       );
-    } 
-  
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(150),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF121212),
-                Color(0xFF383838),
-                Color(0xFF5A5A5A),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: AppBar(
-            leading: GestureDetector(
-              onTap: () {
-                // Handle back navigation to movie home screen
-                Navigator.pop(context);
-              },
-              child: Image.asset(
-                'assets/images/Vector (5).png', // Replace with your image asset path
-                height: 20,
-                width: 18,
+      body: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
+          controller: _controller,
+          slivers: [
+            SliverAppBar(
+              backgroundColor: const Color(0xFF121212),
+              expandedHeight: 230.0,
+              leading: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Image.asset(
+                  'assets/images/Vector (5).png', // Replace with your image asset path
+                  height: 21.02,
+                  width: 11.26,
+                ),
               ),
-            ),
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-          ),
-        ),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0), // Add padding around the text
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Align text to the left
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 16.0),
-              child: Text(
-                'How old is Charlotte\nwhen she becomes\nqueen?',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: "Inter",
-                  color: Color(0xFFFFFFFF),
-                  fontWeight: FontWeight.w600,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/images/4553888_19629 2.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned(
+                      left: 23,
+                      bottom: 85.0,
+                      child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                                colors: [
+                                  Color(0xFF9A1398),
+                                  Color(0xFFFFFA3A60),
+                                  Color(0xFFFEBF40)
+                                ], // Define your gradient colors here
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              ).createShader(bounds),
+                          child: Text(
+                            "Question 1/5",
+                            style: TextStyle(
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Inter",
+                            ),
+                          )),
+                    ),
+                    Transform.translate(
+                      offset: Offset(7, 189), // Move the text up
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16.0),
+                        child: Text(
+                          'How old is Charlotte\nwhen she becomes\nqueen?',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: "Inter",
+                            color: Color(0xFFFFFFFF),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            SizedBox(height: 66), // Add spacing between the text and the container
-            _buildOptionContainer(0, '17'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(1, '16'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(2, '18'),
-            SizedBox(height: 24), // Add spacing between containers
-            _buildOptionContainer(3, '19'),
-          ],
-        ),
-      ),
+            //  SliverOverlapInjector(handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context)),
+            SliverList(
+                delegate: SliverChildListDelegate([
+              Padding(
+                padding: EdgeInsets.all(7.0), // Add padding around the text
+                child: Column(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Align text to the left
+                  children: [
+                  
+                    SizedBox(
+                        height:
+                            66), // Add spacing between the text and the container
+                    _buildOptionContainer(0, '17'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(1, '16'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(2, '18'),
+                    SizedBox(height: 24), // Add spacing between containers
+                    _buildOptionContainer(3, '19'),
+                  ],
+                ),
+              ),
+            ]))
+          ]),
       backgroundColor: Color(0xFF121212),
     );
   }
@@ -111,7 +243,8 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
           ),
           padding: EdgeInsets.all(16.0), // Add padding inside the container
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center, // Center text vertically
+            crossAxisAlignment:
+                CrossAxisAlignment.center, // Center text vertically
             children: [
               Text(
                 '${index + 1}.',
