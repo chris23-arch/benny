@@ -73,7 +73,11 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
               height: 56,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                  colors: [
+                    Color(0xFF9A1398),
+                    Color(0xFFFA3A60),
+                    Color(0xFFFEBF40)
+                  ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -129,46 +133,68 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          _buildPodiumItem('Alena Donin', 'assets/images/Mask Group.png', '1,469 QP', const Color(0xFFFA4E5B), 2),
-          _buildPodiumItem('Davis Curtis', 'assets/images/Mask Group (1).png', '2,569 QP', const Color(0xFFFEBF40), 1),
-          _buildPodiumItem('Craig Gouse', 'assets/images/Avatar (1).png', '1,053 QP', const Color(0xFFFF8C4B), 3),
+          _buildPodiumItem('Alena Donin', 'assets/images/Mask Group.png',
+              '1,469 QP', const Color(0xFFFA4E5B), 2),
+          _buildPodiumItem('Davis Curtis', 'assets/images/Mask Group (1).png',
+              '2,569 QP', const Color(0xFFFEBF40), 1),
+          _buildPodiumItem('Craig Gouse', 'assets/images/Avatar (1).png',
+              '1,053 QP', const Color(0xFFFF8C4B), 3),
         ],
       ),
     );
   }
 
-  Widget _buildPodiumItem(String name, String imagePath, String points, Color color, int place) {
+  Widget _buildPodiumItem(
+      String name, String imagePath, String points, Color color, int place) {
     double height = place == 1 ? 120 : 100;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Image.asset(imagePath, height: 56, width: 56),
-        const SizedBox(height: 8),
-        Text(
-          name,
-          style: const TextStyle(color: Colors.white, fontSize: 14),
+    return Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+      Image.asset(imagePath, height: 56, width: 56),
+      const SizedBox(height: 8),
+      Text(
+        name,
+        style: const TextStyle(color: Colors.white, fontSize: 14),
+      ),
+      const SizedBox(height: 8),
+      Container(
+        width: 70,
+        // height: height,
+        height: 40,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
-        const SizedBox(height: 8),
-        Container(
-          width: 70,
-          // height: height,
-          height: 40,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-          ),
-          child: Center(
-            child: Text(
-              points,
-              style: const TextStyle(color: Colors.white, fontSize: 12),
-            ),
+        child: Center(
+          child: Text(
+            points,
+            style: const TextStyle(color: Colors.white, fontSize: 12),
           ),
         ),
-      ],
-    );
+      ),
+      const SizedBox(height: 8),
+      Column(
+        children: [
+          Image.asset(
+            'assets/images/Rank.png', // Replace with your image asset path
+            width: 57,
+            height: 25,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'assets/images/Rank (1).png', // Replace with your image asset path
+            width: 70,
+            height: 40,
+            fit: BoxFit.cover,
+          ),
+          Image.asset(
+            'assets/images/Rank (2).png', // Replace with your image asset path
+            width: 70,
+            height: 40,
+            fit: BoxFit.cover,
+          ),
+        ],
+      ),
+    ]);
   }
-
-  
 
   Widget _buildLeaderboardItem(int rank) {
     return Container(

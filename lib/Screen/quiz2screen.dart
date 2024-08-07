@@ -47,65 +47,76 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
     });
 
 
-// // Show Snackbar
-//     showModalBottomSheet(
-//       context: context,
-//       builder: (BuildContext context) {
-//         return Container(
-//           height: 200,
-//           color: Color(0xFF121212),
-//           child: Center(
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: <Widget>[
-//                 Text(
-//                   '+ 100 points',
-//                   style: TextStyle(
-//                     fontSize: 30,
-//                     fontWeight: FontWeight.bold,
-//                     color: Colors.pink,
-//                   ),
-//                 ),
-//                 SizedBox(height: 10),
-//                 Text(
-//                   'You have earned a badge',
-//                   style: TextStyle(
-//                     fontSize: 16,
-//                     color: Colors.white,
-//                   ),
-//                 ),
-//                 SizedBox(height: 10),
-//                 Icon(
-//                   Icons.star,
-//                   size: 50,
-//                   color: Colors.yellow,
-//                 ),
-//                 SizedBox(height: 10),
-//                 Text(
-//                   'TRAILBLAZER',
-//                   style: TextStyle(
-//                     fontSize: 20,
-//                     fontWeight: FontWeight.bold,
-//                     color: Colors.yellow,
-//                   ),
-//                 ),
-//                 SizedBox(height: 20),
-//                 ElevatedButton(
-//                   onPressed: () {
-//                     Navigator.pop(context);
-//                   },
-//                   child: Text('Continue'),
-//                   style: ElevatedButton.styleFrom(
-//                     backgroundColor: Colors.pink, // Background color
-//                     foregroundColor: Colors.white, // Text color
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         );
-//       },
-//     );
+
+// Show Snackbar as a centered dialog
+void showCenteredSnackbar(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return Center(
+        child: Material(
+          color: Colors.transparent,
+          child: Container(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Color(0xFF121212),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            height: 250,
+            width: MediaQuery.of(context).size.width * 0.8, // 80% width of the screen
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  '+ 100 points',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'You have earned a badge',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Icon(
+                  Icons.star,
+                  size: 50,
+                  color: Colors.yellow,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'TRAILBLAZER',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellow,
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Continue'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pink, // Background color
+                    foregroundColor: Colors.white, // Text color
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    },
+  );
+}
 
 
 
@@ -206,7 +217,6 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
                   crossAxisAlignment:
                       CrossAxisAlignment.start, // Align text to the left
                   children: [
-                  
                     SizedBox(
                         height:
                             66), // Add spacing between the text and the container
@@ -228,6 +238,8 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
 
   // Helper method to build each option container
   Widget _buildOptionContainer(int index, String text) {
+        bool isSelected = _selectedContainer == index;
+    bool isCorrect = index == 0; // Assuming index 3 is the correct answer
     return GestureDetector(
       onTap: () => _onContainerTap(index),
       child: Padding(
@@ -235,11 +247,17 @@ class _Quiz2ScreenState extends State<Quiz2Screen> {
         child: Container(
           width: 324.0, // Specify the width of the container
           height: 63.0, // Specify the height of the container
-          decoration: BoxDecoration(
-            color: _selectedContainer == index
-                ? (index == 0 ? Colors.green : Colors.red)
+         decoration: BoxDecoration(
+            color: isSelected
+                ? (isCorrect ? Color(0xFF279401) : Color(0xFFFF3C3C))
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
+            border: Border.all(
+              color: isSelected
+                  ? (isCorrect ? Color(0xFF3CE700) : Color(0xFFC00000))
+                  : Colors.transparent,
+              width: 2.0,
+            ),
           ),
           padding: EdgeInsets.all(16.0), // Add padding inside the container
           child: Row(

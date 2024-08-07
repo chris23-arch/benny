@@ -155,6 +155,8 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
 
   // Helper method to build each option container
   Widget _buildOptionContainer(int index, String text) {
+        bool isSelected = _selectedContainer == index;
+    bool isCorrect = index == 2; // Assuming index 3 is the correct answer
     return GestureDetector(
       onTap: () => _onContainerTap(index),
       child: Padding(
@@ -163,10 +165,16 @@ class _Quiz1ScreenState extends State<Quiz1Screen> {
           width: 324.0, // Specify the width of the container
           height: 63.0, // Specify the height of the container
           decoration: BoxDecoration(
-            color: _selectedContainer == index
-                ? (index == 2 ? Colors.green : Colors.red)
+            color: isSelected
+                ? (isCorrect ? Color(0xFF279401) : Color(0xFFFF3C3C))
                 : Color(0xFF212020),
             borderRadius: BorderRadius.circular(17),
+            border: Border.all(
+              color: isSelected
+                  ? (isCorrect ? Color(0xFF3CE700) : Color(0xFFC00000))
+                  : Colors.transparent,
+              width: 2.0,
+            ),
           ),
           padding: EdgeInsets.all(16.0), // Add padding inside the container
           child: Row(
