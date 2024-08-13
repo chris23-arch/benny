@@ -73,9 +73,9 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
   Widget build(BuildContext context) {  
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(kToolbarHeight),
+          preferredSize: const Size.fromHeight(kToolbarHeight),
           child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0xFF121212),
@@ -94,16 +94,16 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                     height: 20,
                     width: 18,
                   ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               ShaderMask(
                 shaderCallback: (Rect bounds) {
-                  return LinearGradient(
+                  return const LinearGradient(
                     colors: [
                      Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)
                     ],
                   ).createShader(bounds);
                 },
-                child: Text(
+                child: const Text(
                   "Upcoming",
                   style: TextStyle(
                    color: Colors.white,
@@ -164,7 +164,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                             color: Color(0XFF505050),
                           ),
                           prefixIcon:
-                              Icon(Icons.search, color: Color(0XFF505050)),
+                              const Icon(Icons.search, color: Color(0XFF505050)),
                           // contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(11.0),
@@ -189,7 +189,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                 
                           ),
                           filled: true,
-                          fillColor: Color(0xFF212020),
+                          fillColor: const Color(0xFF212020),
                         ),
                         style: const TextStyle(
                           color: Colors.white,
@@ -200,8 +200,8 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 24),
-            Padding(
+            const SizedBox(height: 24),
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 "06 - May - 2035",
@@ -215,16 +215,16 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
               ),
             ),
 
-            SizedBox(height: 16), // Adjust spacing between text and container
+            const SizedBox(height: 16), // Adjust spacing between text and container
 
             // Container with image and text
             Container(
-              padding: EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
+              padding: const EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
               width:
                   MediaQuery.of(context).size.width, // Full width of the screen
               constraints:
-                  BoxConstraints(maxHeight: 158), // Max height of the container
-                   decoration: BoxDecoration(
+                  const BoxConstraints(maxHeight: 158), // Max height of the container
+                   decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0xFF212020),
@@ -245,14 +245,14 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                     width: 86,
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 0.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                       children: [ 
-                      Text(
+                      const Text(
                         "Shrek Saves Fiona",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
@@ -262,8 +262,8 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                       SizedBox(height: 4),
-                          Text(
+                       const SizedBox(height: 4),
+                          const Text(
                             "American/Animation/1hr 45mins",
                             style: TextStyle(
                               color: Color(0XFFA7A7A7),
@@ -273,523 +273,8 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                             ),
                             textAlign: TextAlign.left,
                           ),
-                           SizedBox(height: 12),
-                          Text(
-                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           SizedBox(height: 12),
-                            Stack(
-                            children: [
-                              // Underline
-                              Positioned(
-                                bottom: -1, // Adjust based on your requirement
-                                left: 0,
-                                right: 0,
-                                child: Container(
-                                  height: 2, // Adjust thickness
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                           ShaderMask(
-                            shaderCallback: (bounds) => LinearGradient(
-                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ).createShader(bounds),
-                          child: Text(
-                            "Watch trailer",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           ),
-                      ],
-                    ),
-                      ],
-                  ),
-                  ),
-                  )
-                ],
-              ),
-                Positioned(
-                    top: 5,
-                    right: 20,
-                    child: Image.asset(
-                      'assets/images/Vector (4).png', // Replace with your top right image asset path
-                      height: 15, // Adjust height as needed
-                      width: 3, // Adjust width as needed
-                    ),
-                ),
-          ],
-        ),
-      ),
-      SizedBox(height: 5), // Adjust spacing between text and container
-
-            // Container with image and text
-            Container(
-              padding: EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
-              width:
-                  MediaQuery.of(context).size.width, // Full width of the screen
-              constraints:
-                  BoxConstraints(maxHeight: 158), // Max height of the container
-                   decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF121212),
-                    Color(0xFF2A2A2A),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Stack(
-                children: [
-               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/images/Frame 54.png', // Replace with your image asset path
-                    height: 140,
-                    width: 86,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [ 
-                      Text(
-                        "Shrek Saves Fiona",
-                        style: TextStyle(
-                          color: Color(0XFFFFFFFF),
-                          fontSize: 16,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                       SizedBox(height: 4),
-                          Text(
-                            "American/Animation/1hr 45mins",
-                            style: TextStyle(
-                              color: Color(0XFFA7A7A7),
-                              fontSize: 10,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                           SizedBox(height: 12),
-                          Text(
-                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           SizedBox(height: 12),
-                            Stack(
-                            children: [
-                              // Underline
-                              Positioned(
-                                bottom: -1, // Adjust based on your requirement
-                                left: 0,
-                                right: 0,
-                                child: Container(
-                                  height: 2, // Adjust thickness
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                           ShaderMask(
-                            shaderCallback: (bounds) => LinearGradient(
-                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ).createShader(bounds),
-                          child: Text(
-                            "Watch trailer",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           ),
-                      ],
-                    ),
-                      ],
-                  ),
-                  ),
-                  )
-                ],
-              ),
-                Positioned(
-                    top: 5,
-                    right: 20,
-                    child: Image.asset(
-                      'assets/images/Vector (4).png', // Replace with your top right image asset path
-                      height: 15, // Adjust height as needed
-                      width: 3, // Adjust width as needed
-                    ),
-                )
-          ],
-        ),
-      ),
-      SizedBox(height: 5), // Adjust spacing between text and container
-
-            // Container with image and text
-            Container(
-              padding: EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
-              width:
-                  MediaQuery.of(context).size.width, // Full width of the screen
-              constraints:
-                  BoxConstraints(maxHeight: 158), // Max height of the container
-                   decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF121212),
-                    Color(0xFF2A2A2A),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Stack(
-                children: [
-               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/images/Frame 54.png', // Replace with your image asset path
-                    height: 140,
-                    width: 86,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [ 
-                      Text(
-                        "Shrek Saves Fiona",
-                        style: TextStyle(
-                          color: Color(0XFFFFFFFF),
-                          fontSize: 16,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                       SizedBox(height: 4),
-                          Text(
-                            "American/Animation/1hr 45mins",
-                            style: TextStyle(
-                              color: Color(0XFFA7A7A7),
-                              fontSize: 10,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                           SizedBox(height: 12),
-                          Text(
-                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           SizedBox(height: 12),
-                            Stack(
-                            children: [
-                              // Underline
-                              Positioned(
-                                bottom: -1, // Adjust based on your requirement
-                                left: 0,
-                                right: 0,
-                                child: Container(
-                                  height: 2, // Adjust thickness
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                           ShaderMask(
-                            shaderCallback: (bounds) => LinearGradient(
-                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ).createShader(bounds),
-                          child: Text(
-                            "Watch trailer",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           ),
-                      ],
-                    ),
-                      ],
-                  ),
-                  ),
-                  )
-                ],
-              ),
-                Positioned(
-                    top: 5,
-                    right: 20,
-                    child: Image.asset(
-                      'assets/images/Vector (4).png', // Replace with your top right image asset path
-                      height: 15, // Adjust height as needed
-                      width: 3, // Adjust width as needed
-                    ),
-                )
-          ],
-        ),
-      ),
-      SizedBox(height: 24),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                "06 - May - 2035",
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  color: Color(0XFFFFFFFF),
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                ),
-              ),
-            ),
-
-            SizedBox(height: 16), // Adjust spacing between text and container
-
-            // Container with image and text
-            Container(
-              padding: EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
-              width:
-                  MediaQuery.of(context).size.width, // Full width of the screen
-              constraints:
-                  BoxConstraints(maxHeight: 158), // Max height of the container
-                   decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF121212),
-                    Color(0xFF2A2A2A),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Stack(
-                children: [
-               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/images/Frame 54.png', // Replace with your image asset path
-                    height: 140,
-                    width: 86,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [ 
-                      Text(
-                        "Shrek Saves Fiona",
-                        style: TextStyle(
-                          color: Color(0XFFFFFFFF),
-                          fontSize: 16,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                       SizedBox(height: 4),
-                          Text(
-                            "American/Animation/1hr 45mins",
-                            style: TextStyle(
-                              color: Color(0XFFA7A7A7),
-                              fontSize: 10,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                           SizedBox(height: 12),
-                          Text(
-                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           SizedBox(height: 12),
-                            Stack(
-                            children: [
-                              // Underline
-                              Positioned(
-                                bottom: -1, // Adjust based on your requirement
-                                left: 0,
-                                right: 0,
-                                child: Container(
-                                  height: 2, // Adjust thickness
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                           ShaderMask(
-                            shaderCallback: (bounds) => LinearGradient(
-                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ).createShader(bounds),
-                          child: Text(
-                            "Watch trailer",
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 12,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                           ),
-                      ],
-                    ),
-                      ],
-                  ),
-                  ),
-                  )
-                ],
-              ),
-                Positioned(
-                    top: 5,
-                    right: 20,
-                    child: Image.asset(
-                      'assets/images/Vector (4).png', // Replace with your top right image asset path
-                      height: 15, // Adjust height as needed
-                      width: 3, // Adjust width as needed
-                    ),
-                )
-          ],
-        ),
-      ),
-      SizedBox(height: 5), // Adjust spacing between text and container
-
-            // Container with image and text
-            Container(
-              padding: EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
-              width:
-                  MediaQuery.of(context).size.width, // Full width of the screen
-              constraints:
-                  BoxConstraints(maxHeight: 158), // Max height of the container
-                   decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF121212),
-                    Color(0xFF2A2A2A),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Stack(
-                children: [
-               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/images/Frame 54.png', // Replace with your image asset path
-                    height: 140,
-                    width: 86,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [ 
-                      Text(
-                        "Shrek Saves Fiona",
-                        style: TextStyle(
-                          color: Color(0XFFFFFFFF),
-                          fontSize: 16,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w600,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                       SizedBox(height: 4),
-                          Text(
-                            "American/Animation/1hr 45mins",
-                            style: TextStyle(
-                              color: Color(0XFFA7A7A7),
-                              fontSize: 10,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                           SizedBox(height: 12),
-                          Text(
+                           const SizedBox(height: 12),
+                          const Text(
                             "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
                             style: TextStyle(
                               color: Color(0XFFFFFFFF),
@@ -809,7 +294,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                 right: 0,
                                 child: Container(
                                   height: 2, // Adjust thickness
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
                                       begin: Alignment.topLeft,
@@ -819,12 +304,527 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                 ),
                               ),
                            ShaderMask(
-                            shaderCallback: (bounds) => LinearGradient(
+                            shaderCallback: (bounds) => const LinearGradient(
                               colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ).createShader(bounds),
-                          child: Text(
+                          child: const Text(
+                            "Watch trailer",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           ),
+                      ],
+                    ),
+                      ],
+                  ),
+                  ),
+                  )
+                ],
+              ),
+                Positioned(
+                    top: 5,
+                    right: 20,
+                    child: Image.asset(
+                      'assets/images/Vector (4).png', // Replace with your top right image asset path
+                      height: 15, // Adjust height as needed
+                      width: 3, // Adjust width as needed
+                    ),
+                ),
+          ],
+        ),
+      ),
+      const SizedBox(height: 5), // Adjust spacing between text and container
+
+            // Container with image and text
+            Container(
+              padding: const EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
+              width:
+                  MediaQuery.of(context).size.width, // Full width of the screen
+              constraints:
+                  const BoxConstraints(maxHeight: 158), // Max height of the container
+                   decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF121212),
+                    Color(0xFF2A2A2A),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Stack(
+                children: [
+               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/Frame 54.png', // Replace with your image asset path
+                    height: 140,
+                    width: 86,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [ 
+                      const Text(
+                        "Shrek Saves Fiona",
+                        style: TextStyle(
+                          color: Color(0XFFFFFFFF),
+                          fontSize: 16,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                       const SizedBox(height: 4),
+                          const Text(
+                            "American/Animation/1hr 45mins",
+                            style: TextStyle(
+                              color: Color(0XFFA7A7A7),
+                              fontSize: 10,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                           const SizedBox(height: 12),
+                          const Text(
+                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           const SizedBox(height: 12),
+                            Stack(
+                            children: [
+                              // Underline
+                              Positioned(
+                                bottom: -1, // Adjust based on your requirement
+                                left: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 2, // Adjust thickness
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                           ShaderMask(
+                            shaderCallback: (bounds) => const LinearGradient(
+                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ).createShader(bounds),
+                          child: const Text(
+                            "Watch trailer",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           ),
+                      ],
+                    ),
+                      ],
+                  ),
+                  ),
+                  )
+                ],
+              ),
+                Positioned(
+                    top: 5,
+                    right: 20,
+                    child: Image.asset(
+                      'assets/images/Vector (4).png', // Replace with your top right image asset path
+                      height: 15, // Adjust height as needed
+                      width: 3, // Adjust width as needed
+                    ),
+                )
+          ],
+        ),
+      ),
+      const SizedBox(height: 5), // Adjust spacing between text and container
+
+            // Container with image and text
+            Container(
+              padding: const EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
+              width:
+                  MediaQuery.of(context).size.width, // Full width of the screen
+              constraints:
+                  const BoxConstraints(maxHeight: 158), // Max height of the container
+                   decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF121212),
+                    Color(0xFF2A2A2A),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Stack(
+                children: [
+               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/Frame 54.png', // Replace with your image asset path
+                    height: 140,
+                    width: 86,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [ 
+                      const Text(
+                        "Shrek Saves Fiona",
+                        style: TextStyle(
+                          color: Color(0XFFFFFFFF),
+                          fontSize: 16,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                       const SizedBox(height: 4),
+                          const Text(
+                            "American/Animation/1hr 45mins",
+                            style: TextStyle(
+                              color: Color(0XFFA7A7A7),
+                              fontSize: 10,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                           const SizedBox(height: 12),
+                          const Text(
+                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           const SizedBox(height: 12),
+                            Stack(
+                            children: [
+                              // Underline
+                              Positioned(
+                                bottom: -1, // Adjust based on your requirement
+                                left: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 2, // Adjust thickness
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                           ShaderMask(
+                            shaderCallback: (bounds) => const LinearGradient(
+                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ).createShader(bounds),
+                          child: const Text(
+                            "Watch trailer",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           ),
+                      ],
+                    ),
+                      ],
+                  ),
+                  ),
+                  )
+                ],
+              ),
+                Positioned(
+                    top: 5,
+                    right: 20,
+                    child: Image.asset(
+                      'assets/images/Vector (4).png', // Replace with your top right image asset path
+                      height: 15, // Adjust height as needed
+                      width: 3, // Adjust width as needed
+                    ),
+                )
+          ],
+        ),
+      ),
+      const SizedBox(height: 24),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                "06 - May - 2035",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  color: Color(0XFFFFFFFF),
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 16), // Adjust spacing between text and container
+
+            // Container with image and text
+            Container(
+              padding: const EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
+              width:
+                  MediaQuery.of(context).size.width, // Full width of the screen
+              constraints:
+                  const BoxConstraints(maxHeight: 158), // Max height of the container
+                   decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF121212),
+                    Color(0xFF2A2A2A),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Stack(
+                children: [
+               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/Frame 54.png', // Replace with your image asset path
+                    height: 140,
+                    width: 86,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [ 
+                      const Text(
+                        "Shrek Saves Fiona",
+                        style: TextStyle(
+                          color: Color(0XFFFFFFFF),
+                          fontSize: 16,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                       const SizedBox(height: 4),
+                          const Text(
+                            "American/Animation/1hr 45mins",
+                            style: TextStyle(
+                              color: Color(0XFFA7A7A7),
+                              fontSize: 10,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                           const SizedBox(height: 12),
+                          const Text(
+                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           const SizedBox(height: 12),
+                            Stack(
+                            children: [
+                              // Underline
+                              Positioned(
+                                bottom: -1, // Adjust based on your requirement
+                                left: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 2, // Adjust thickness
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                           ShaderMask(
+                            shaderCallback: (bounds) => const LinearGradient(
+                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ).createShader(bounds),
+                          child: const Text(
+                            "Watch trailer",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           ),
+                      ],
+                    ),
+                      ],
+                  ),
+                  ),
+                  )
+                ],
+              ),
+                Positioned(
+                    top: 5,
+                    right: 20,
+                    child: Image.asset(
+                      'assets/images/Vector (4).png', // Replace with your top right image asset path
+                      height: 15, // Adjust height as needed
+                      width: 3, // Adjust width as needed
+                    ),
+                )
+          ],
+        ),
+      ),
+      const SizedBox(height: 5), // Adjust spacing between text and container
+
+            // Container with image and text
+            Container(
+              padding: const EdgeInsets.only(top: 12.0, bottom: 8.0, left: 17.0, right: 27.0 ),
+              width:
+                  MediaQuery.of(context).size.width, // Full width of the screen
+              constraints:
+                  const BoxConstraints(maxHeight: 158), // Max height of the container
+                   decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF121212),
+                    Color(0xFF2A2A2A),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Stack(
+                children: [
+               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/Frame 54.png', // Replace with your image asset path
+                    height: 140,
+                    width: 86,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [ 
+                      const Text(
+                        "Shrek Saves Fiona",
+                        style: TextStyle(
+                          color: Color(0XFFFFFFFF),
+                          fontSize: 16,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                       const SizedBox(height: 4),
+                          const Text(
+                            "American/Animation/1hr 45mins",
+                            style: TextStyle(
+                              color: Color(0XFFA7A7A7),
+                              fontSize: 10,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                           const SizedBox(height: 12),
+                          const Text(
+                            "An ogre and a princess from an unlikely bong in this romance and adventure filled animated movie.",
+                            style: TextStyle(
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                           const SizedBox(height: 12),
+                            Stack(
+                            children: [
+                              // Underline
+                              Positioned(
+                                bottom: -1, // Adjust based on your requirement
+                                left: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 2, // Adjust thickness
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                           ShaderMask(
+                            shaderCallback: (bounds) => const LinearGradient(
+                              colors: [Color(0xFF9A1398), Color(0xFFFA3A60), Color(0xFFFEBF40)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ).createShader(bounds),
+                          child: const Text(
                             "Watch trailer",
                             style: TextStyle(
                               color: Color(0XFFFFFFFF),
@@ -855,9 +855,9 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
           ],
         ),
       ),
-      SizedBox(height: 24),
+      const SizedBox(height: 24),
       Padding(
-        padding: EdgeInsets.only(left: 14),
+        padding: const EdgeInsets.only(left: 14),
         child: SizedBox(
           width: 353,
           height: 41,
@@ -895,8 +895,8 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
        )
        )
       ),
-               SizedBox(height: 48),
-             Padding(
+               const SizedBox(height: 48),
+             const Padding(
               padding: EdgeInsets.only(left: 17.0),
               child: Text(
                 'Available movies and series',
@@ -935,9 +935,9 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                 },
               ),
             ),
-             SizedBox(height: 8),
+             const SizedBox(height: 8),
       Padding(
-        padding: EdgeInsets.only(left: 14),
+        padding: const EdgeInsets.only(left: 14),
         child: SizedBox(
           width: 353,
           height: 41,
@@ -945,9 +945,9 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15.0, vertical: 10.0),
                           decoration: BoxDecoration(
-                            color: Color(0xFF212020),
+                            color: const Color(0xFF212020),
                             borderRadius: BorderRadius.circular(4.0),
-                            border: Border.all(color: Color(0xFF747474)),
+                            border: Border.all(color: const Color(0xFF747474)),
                           ),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -967,11 +967,11 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
        )
        )
                         ),
-                          SizedBox(height: 50),
+                          const SizedBox(height: 50),
           ],
         ),
       ),
-      backgroundColor: Color(0xFF212020),
+      backgroundColor: const Color(0xFF212020),
     );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:benny/Screen/moviehomedetailscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -138,9 +140,9 @@ class _MovieHomescreenState extends State<MovieHomescreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(120),
+          preferredSize: const Size.fromHeight(120),
           child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Color(0XFF121212), Color(0XFF5A5A5A)],
                   begin: Alignment.bottomCenter,
@@ -186,7 +188,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                                 width:
                                     17.0), // Adjust the space between search bar and image
                             GestureDetector(
@@ -221,7 +223,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         //     0xFFFA4E5B), // Custom color for selected tab label
                         unselectedLabelColor: const Color(0xFFA7A7A7),
                         isScrollable: false,
-                        dividerColor: Color(0XFF212020),
+                        dividerColor: const Color(0XFF212020),
                         tabs: [
                           _buildTab('Top rated', 0),
                           _buildTab('Latest', 1),
@@ -247,15 +249,16 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               child: _buildMovieCard(),
               // ),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: Container(
                 width: 700, // Adjust the width of the container here
                 decoration: BoxDecoration(
-                  color: Color(0xFF383838),
+                  color: const Color(0xFF383838),
                   borderRadius: BorderRadius.circular(4.0),
-                  border: Border.all(color: Color(0xFF4C4C4C), width: 2.0),
+                  border:
+                      Border.all(color: const Color(0xFF4C4C4C), width: 2.0),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -265,7 +268,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'Movie Streaming Channel',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -275,8 +278,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                               fontSize: 16,
                             ),
                           ),
-                          SizedBox(height: 8),
-                          Text(
+                          const SizedBox(height: 8),
+                          const Text(
                             'Subscribe to our YouTube Channel for more updates',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -300,13 +303,13 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Color(0xFFFF0000), // Red color
+                                color: const Color(0xFFFF0000), // Red color
                                 borderRadius: BorderRadius.circular(
                                     8.0), // Adjust container border radius
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 18, vertical: 8),
-                              child: Text(
+                              child: const Text(
                                 'Subscribe',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -327,8 +330,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               ),
             ),
 
-            SizedBox(height: 24),
-            Padding(
+            const SizedBox(height: 24),
+            const Padding(
               padding: EdgeInsets.only(left: 17.0, top: 0.0),
               child: Text(
                 'Trending',
@@ -379,13 +382,13 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               ),
             ),
             // Trending header for the next set of movies
-            SizedBox(height: 0),
+            const SizedBox(height: 0),
             Padding(
-              padding: EdgeInsets.only(left: 17.0, top: 8.0),
+              padding: const EdgeInsets.only(left: 17.0, top: 8.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text.rich(
+                    const Text.rich(
                       TextSpan(
                           text: 'Movies', // Change the header text as needed
                           style: TextStyle(
@@ -541,7 +544,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               ),
             ),
             // Trending movies grid view for the next set of movies
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.only(left: 11.0),
               child: GridView.builder(
@@ -578,7 +581,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
             ),
 
             // fourthoneyh
-            SizedBox(height: 0.0),
+            const SizedBox(height: 0.0),
             const Padding(
                 padding: EdgeInsets.only(left: 17.0, top: 2.0),
                 child: Row(
@@ -654,7 +657,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
           ],
         ),
       ),
-      backgroundColor: Color(0xFF212020),
+      backgroundColor: const Color(0xFF212020),
     );
   }
 
@@ -671,9 +674,9 @@ class _MovieHomescreenState extends State<MovieHomescreen>
             return LinearGradient(
                     colors: _tabController.index == tabIndex
                         ? [
-                            Color(0xFF9A1398),
-                            Color(0xFFFA3A60),
-                            Color(0xFFFEBF40)
+                            const Color(0xFF9A1398),
+                            const Color(0xFFFA3A60),
+                            const Color(0xFFFEBF40)
                           ]
                         : [
                             Colors.white,
@@ -731,7 +734,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
           builder: (BuildContext context) {
             return Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              margin: const EdgeInsets.symmetric(horizontal: 5.0),
               child: item,
             );
           },
@@ -743,14 +746,14 @@ class _MovieHomescreenState extends State<MovieHomescreen>
   Color getContainerColor(String title) {
     switch (title) {
       case 'The Lord Of The Rings':
-        return Color(0xFF563926); // Brown color
+        return const Color(0xFF563926); // Brown color
       case 'Avatar: The Last Airbender':
-        return Color(0xFFC48F83); // Blue color
+        return const Color(0xFFC48F83); // Blue color
       case 'Bridgerton: Season 3':
-        return Color(0xFF86B7A6); // Different color
+        return const Color(0xFF86B7A6); // Different color
       // Add more cases for other titles if needed
       default:
-        return Color(0xFF563926); // Default color (brown)
+        return const Color(0xFF563926); // Default color (brown)
     }
   }
 
