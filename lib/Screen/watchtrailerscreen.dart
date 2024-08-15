@@ -45,6 +45,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
+                    height: 18.75 / 16,
                   ),
                 ),
                 titleSpacing: 1.0,
@@ -120,12 +121,13 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontFamily: 'Anton',
                                   fontWeight: FontWeight.w400,
                                   fontSize: 26,
+                                  height: 36.13 / 26,
                                   shadows: [
                                     Shadow(
                                       color: Color.fromRGBO(
                                           0, 0, 0, 0.5), // Shadow color
                                       offset: Offset(2.0, 2.0), // Shadow offset
-                                      blurRadius: 3.0, // Shadow blur radius
+                                      blurRadius: 4.0, // Shadow blur radius
                                     ),
                                   ],
                                 ),
@@ -172,6 +174,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                               fontSize: 18,
                                               color: Color(
                                                   0xFFFF0000), // Text color inside the button
+                                              height: 21.09 / 18,
                                             ),
                                           ),
                                         ),
@@ -193,7 +196,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -248,6 +251,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -259,6 +263,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 12,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -302,6 +307,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -322,7 +328,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -377,6 +383,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -388,6 +395,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 12,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -431,6 +439,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -451,7 +460,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -506,6 +515,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -516,7 +526,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -560,6 +571,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -580,7 +592,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -635,6 +647,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -645,7 +658,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -689,6 +703,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -709,7 +724,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -764,6 +779,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -774,7 +790,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -818,6 +835,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -838,7 +856,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -893,6 +911,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -903,7 +922,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -947,6 +967,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -985,6 +1006,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                       fontWeight: FontWeight.w400,
                       fontSize: 24, // Adjust font size as needed
                       color: Colors.white,
+                      height: 36.13 / 24,
                     ),
                   ),
                 ),
@@ -998,7 +1020,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1053,6 +1075,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1060,11 +1083,11 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                         const Text(
                           "Ut ipsum in non tincidunt\nlobortis id. Matti matti mi\ncras fusce congue.....",
                           style: TextStyle(
-                            color: Color(0XFFFFFFFF),
-                            fontSize: 13,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w500,
-                          ),
+                              color: Color(0XFFFFFFFF),
+                              fontSize: 12,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w500,
+                              height: 14.06 / 12),
                           textAlign: TextAlign.left,
                         ),
                         const SizedBox(height: 5),
@@ -1107,6 +1130,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -1127,7 +1151,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1182,6 +1206,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1193,6 +1218,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 12,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1236,6 +1262,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -1256,7 +1283,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1311,6 +1338,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1321,7 +1349,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1365,6 +1394,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -1385,7 +1415,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1440,6 +1470,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1450,7 +1481,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1494,6 +1526,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -1514,7 +1547,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1569,6 +1602,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1579,7 +1613,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1623,6 +1658,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                                   fontSize: 12,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
+                                  height: 14.52 / 12,
                                 ),
                                 textAlign: TextAlign.start,
                               ),
@@ -1643,7 +1679,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 104,
+                    height: 94,
                     width: 160,
                     child: Stack(
                         clipBehavior:
@@ -1698,6 +1734,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             fontSize: 16,
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
+                            height: 24.09 / 16,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1708,7 +1745,8 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                             color: Color(0XFFFFFFFF),
                             fontSize: 12,
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
+                            height: 14.06 / 12,
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -1798,6 +1836,7 @@ class _WatchTrailerScreenState extends State<WatchTrailerScreen> {
                               fontSize: 16,
                               color: Color(0xFFFFFFFF),
                               fontFamily: 'Roboto',
+                              height: 24 / 16,
                             ),
                           ),
                           const SizedBox(

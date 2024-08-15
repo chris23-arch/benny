@@ -169,14 +169,46 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                   decoration: InputDecoration(
                                       hintText: 'Avatar',
                                       hintStyle: const TextStyle(
-                                          color: Color(
-                                              0XFFA7A7A7)), // Change hint text color to white
-                                      prefixIcon: const Icon(Icons.search,
-                                          color: Color(
-                                              0XFFA7A7A7)), // change the icon color to white
+                                          color: Color(0XFFA7A7A7),
+                                          fontFamily: 'Roboto',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          height: 14.06 /
+                                              12), // Change hint text color to white
+                                      prefixIcon: const Icon(
+                                        Icons.search,
+                                        color: Color(0XFFA7A7A7),
+                                        //size: 17,
+                                      ), // change the icon color to white
+                                      contentPadding:
+                                          EdgeInsets.symmetric(horizontal: 8),
                                       border: OutlineInputBorder(
                                         borderRadius:
-                                            BorderRadius.circular(10.0),
+                                            BorderRadius.circular(11.0),
+                                        borderSide: const BorderSide(
+                                          color: Color(
+                                              0xFF505050), // Set your desired border color here
+                                          width:
+                                              1.0, // Set the width of the border
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(11.0),
+                                        borderSide: const BorderSide(
+                                          color: Color(
+                                              0xFF505050), // Set the border color when the TextField is focused
+                                          width: 1.0,
+                                        ),
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(11.0),
+                                        borderSide: const BorderSide(
+                                          color: Color(
+                                              0xFF505050), // Set the border color when the TextField is enabled
+                                          width: 1.0,
+                                        ),
                                       ),
                                       filled: true,
                                       fillColor:
@@ -254,77 +286,119 @@ class _MovieHomescreenState extends State<MovieHomescreen>
               padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: Container(
                 width: 700, // Adjust the width of the container here
+                height: 127,
                 decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color(0xFFF34D58),
+                      Color(0xFFEB3442),
+                      Color(0xFFE72736)
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                   color: const Color(0xFF383838),
                   borderRadius: BorderRadius.circular(4.0),
-                  border:
-                      Border.all(color: const Color(0xFF4C4C4C), width: 2.0),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Movie Streaming Channel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFFFFFFF),
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Text(
-                            'Subscribe to our YouTube Channel for more updates',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFFF0000),
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10,
-                              decoration: TextDecoration
-                                  .underline, // Underline the text
-                              decorationColor:
-                                  Color(0xFFFF0000), // Same color as the text
-                            ),
-                            maxLines: 1, // Ensure text stays on one line
-                            overflow: TextOverflow
-                                .ellipsis, // Handle overflow if necessary
-                          ),
-                          const SizedBox(height: 12),
-                          GestureDetector(
-                            onTap: () {
-                              // Handle tap event
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: const Color(0xFFFF0000), // Red color
-                                borderRadius: BorderRadius.circular(
-                                    8.0), // Adjust container border radius
-                              ),
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 18, vertical: 8),
-                              child: const Text(
-                                'Subscribe',
+                    // Top right image
+                    Positioned(
+                      top: 1,
+                      right: 7,
+                      child: Image.asset(
+                        'assets/images/icons8_play_button 2.png', // Replace with your image path
+                        width: 38.97, // Adjust width as needed
+                        height: 38.97, // Adjust height as needed
+                      ),
+                    ),
+                    // Bottom left image
+                    Positioned(
+                      bottom: 27,
+                      left: 13,
+                      child: Image.asset(
+                        'assets/images/icons8_play_button 3.png', // Replace with your image path
+                        width: 38.97, // Adjust width as needed
+                        height: 38.97, // Adjust height as needed
+                      ),
+                    ),
+                    Align(
+                        alignment: Alignment.center,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Column(
+                            children: [
+                              const Text(
+                                'SUBSCRIBE TO OUR YOUTUBE CHANNEL',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12,
-                                  color: Color(
-                                      0xFFFFFFFF), // Text color inside the button
+                                  color: Color(0xFFFFFFFF),
+                                  fontFamily: 'Anton',
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 26,
+                                  height: 36.13 / 26,
+                                  shadows: [
+                                    Shadow(
+                                      color: Color.fromRGBO(
+                                          0, 0, 0, 0.5), // Shadow color
+                                      offset: Offset(2.0, 2.0), // Shadow offset
+                                      blurRadius: 4.0, // Shadow blur radius
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 18.0),
+                                child: Container(
+                                  width: 211,
+                                  height: 43,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFFFFFFF), // Red color
+                                    borderRadius: BorderRadius.circular(
+                                        6.4), // Adjust container border radius
+                                  ),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 7, vertical: 4),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        // // Container for the image
+                                        // Container(
+                                        //   alignment: Alignment.center,
+                                        Transform.translate(
+                                          offset: const Offset(0,
+                                              4), // Move the image down by 4 pixels
+                                          child: Image.asset(
+                                            'assets/images/Group 533.png', // Replace with your image path
+                                            width: 30, // Adjust width as needed
+                                            height:
+                                                30.02, // Adjust height as needed
+                                          ),
+                                        ),
+                                        const SizedBox(width: 6.0),
+                                        // Container for the text
+                                        Container(
+                                          alignment: Alignment.center,
+                                          child: const Text(
+                                            'Click to Subscribe',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontFamily: 'Roboto',
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18,
+                                              height: 21.09 / 18,
+                                              color: Color(
+                                                  0xFFFF0000), // Text color inside the button
+                                            ),
+                                          ),
+                                        ),
+                                      ]),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                    )
+                        ))
                   ],
                 ),
               ),
@@ -340,6 +414,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                   fontWeight: FontWeight.w700,
                   color: Color(0xFFFFFFFF),
                   fontFamily: 'Roboto',
+                  height: 18.75 / 16,
                 ),
                 textAlign: TextAlign.left, // Align text to the left
               ),
@@ -393,17 +468,19 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                           text: 'Movies', // Change the header text as needed
                           style: TextStyle(
                               fontSize: 16,
-                              color: Color(0xFFFFFFFF),
+                              color: Color(0xFFA7A7A7),
                               fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w300),
+                              fontWeight: FontWeight.w300,
+                              height: 18.75 / 16),
                           children: <TextSpan>[
                             TextSpan(
                               text: '/',
                               style: TextStyle(
-                                  color: Color(0xFFFFFFFF),
+                                  color: Color(0xFFA7A7A7),
                                   fontSize: 14,
                                   fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w700),
+                                  fontWeight: FontWeight.w700,
+                                  height: 18.75 / 14),
                             ),
                             TextSpan(
                               text: 'Romance',
@@ -411,7 +488,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                   color: Color(0xFFFFFFFF),
                                   fontSize: 16,
                                   fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  height: 18.75 / 16),
                             )
                           ]),
                       // textAlign: TextAlign.left,
@@ -432,9 +510,10 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                               color: Color(
                                   0xFFBBBBBB), // Change the color to your preference
                               fontFamily: 'Roboto',
+                              height: 16.41 / 14,
                               decoration: TextDecoration
                                   .underline, // underline the links
-                              decorationColor: Colors.white,
+                              decorationColor: Color(0xFFBBBBBB),
                             ),
                           ),
                         )),
@@ -494,17 +573,19 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         text: 'Series', // Change the header text as needed
                         style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xFFFFFFFF),
+                            color: Color(0xFFA7A7A7),
                             fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w300),
+                            fontWeight: FontWeight.w500,
+                            height: 18.75 / 16),
                         children: <TextSpan>[
                           TextSpan(
                             text: '/',
                             style: TextStyle(
-                                color: Color(0xFFFFFFFF),
+                                color: Color(0xFFA7A7A7),
                                 fontSize: 16,
                                 fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w700),
+                                fontWeight: FontWeight.w700,
+                                height: 18.75 / 16),
                           ),
                           TextSpan(
                             text: 'Romance',
@@ -512,7 +593,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                 color: Color(0xFFFFFFFF),
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w700,
+                                height: 18.75 / 14),
                           )
                         ]),
                     // textAlign: TextAlign.left,
@@ -533,9 +615,10 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                           color: Color(
                               0xFFBBBBBB), // Change the color to your preference
                           fontFamily: 'Roboto',
+                          height: 16.41 / 16,
                           decoration:
                               TextDecoration.underline, // underline the links
-                          decorationColor: Colors.white,
+                          decorationColor: Color(0xFFBBBBBB),
                         ),
                       ),
                     ),
@@ -592,17 +675,19 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                             text: 'Series', // Change the header text as needed
                             style: TextStyle(
                                 fontSize: 16,
-                                color: Color(0xFFFFFFFF),
+                                color: Color(0xFFA7A7A7),
                                 fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w300),
+                                fontWeight: FontWeight.w500,
+                                height: 18.75 / 16),
                             children: <TextSpan>[
                               TextSpan(
                                 text: '/',
                                 style: TextStyle(
-                                    color: Color(0xFFFFFFFF),
+                                    color: Color(0xFFA7A7A7),
                                     fontSize: 16,
                                     fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w700),
+                                    fontWeight: FontWeight.w700,
+                                    height: 18.75 / 16),
                               ),
                               TextSpan(
                                 text: 'Adult Fiction',
@@ -610,7 +695,8 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                                     color: Color(0XFFFFFFFF),
                                     fontSize: 14,
                                     fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.w500),
+                                    fontWeight: FontWeight.w700,
+                                    height: 18.75 / 16),
                               ),
                             ]),
                         // textAlign: TextAlign.left,
@@ -688,6 +774,9 @@ class _MovieHomescreenState extends State<MovieHomescreen>
             label,
             style: const TextStyle(
               fontSize: 14,
+              fontFamily: "Roboto",
+              fontWeight: FontWeight.w800,
+              height: 16.41 / 14,
             ),
           ),
         ),
@@ -788,6 +877,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                       fontSize: 12,
                       color: Color(0xFFFFFFFF),
                       fontFamily: 'Roboto',
+                      height: 14.06 / 12,
                     ),
                   ),
                 ],
@@ -803,6 +893,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                             fontSize: 10,
                             color: Color(0xFFA7A7A7),
                             fontFamily: 'Roboto',
+                            height: 11.72 / 10,
                           ),
                         ),
                       if (subtitle != null && ageRating != null)
@@ -822,6 +913,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                               fontSize: 12,
                               color: Color(0xFF1A1A1A),
                               fontFamily: 'Roboto',
+                              height: 14.06 / 12,
                             ),
                           ),
                         ),
@@ -854,6 +946,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                         fontSize: 10,
                         color: Color(0xFFFFFFFF),
                         fontFamily: 'Roboto',
+                        height: 11.72 / 10,
                       ),
                     ),
                   ],
@@ -908,6 +1001,7 @@ class _MovieHomescreenState extends State<MovieHomescreen>
                               fontSize: 12,
                               color: Color(0xFFFFFFFF),
                               fontFamily: 'Roboto',
+                              height: 14.06 / 12,
                             ),
                           ),
                         ],
@@ -949,6 +1043,7 @@ Widget _buildTrendingMovieCard({
               fontWeight: FontWeight.w400,
               color: Color(0xFFFFFFFF),
               fontFamily: 'Roboto',
+              height: 16.41 / 14,
             ),
           ),
           const SizedBox(height: 4.0),
@@ -958,6 +1053,7 @@ Widget _buildTrendingMovieCard({
               fontSize: 10,
               color: Color(0XFFA7A7A7),
               fontFamily: 'Roboto',
+              height: 11.72 / 10,
             ),
           ),
         ],
@@ -972,6 +1068,7 @@ Widget _buildTrendingMovieCard({
             color: Color(0xFFFA4E5B),
             fontWeight: FontWeight.w400,
             fontFamily: 'Roboto',
+            height: 14.06 / 12,
           ),
         ),
       ),
@@ -1024,6 +1121,7 @@ Widget _buildSpecialContainer() {
                                 color: Color(0xFFFFFFFF),
                                 fontFamily: 'Roboto',
                                 fontSize: 14,
+                                height: 16.41 / 14,
                               ),
                             ),
                           ],
@@ -1054,6 +1152,7 @@ Widget _buildSpecialContainer() {
                                   fontSize: 12,
                                   color: Color(0xFFFFFFFF),
                                   fontFamily: 'Roboto',
+                                  height: 14.06 / 12,
                                 ),
                               ),
                             ],
@@ -1074,6 +1173,7 @@ Widget _buildSpecialContainer() {
                                 color: Color(0xFFFFFFFF),
                                 fontSize: 12,
                                 fontFamily: 'Roboto',
+                                height: 14.06 / 12,
                               ),
                             ),
                           ],

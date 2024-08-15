@@ -50,6 +50,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         color: Colors.white,
                         fontFamily: 'Roboto',
                         fontWeight: FontWeight.w500,
+                        height: 18.75 / 16,
                         fontSize: 16,
                       ),
                     ),
@@ -80,8 +81,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                   style: TextStyle(
                     color: Color(0XFFFFFFFF),
                     fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     fontSize: 18,
+                    height: 28 / 18,
                   ),
                 ),
               )),
@@ -98,10 +100,14 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       decoration: InputDecoration(
                         hintText: 'Avatar',
                         hintStyle: const TextStyle(
-                          color: Color(0XFF505050),
+                          color: Color(0XFFA7A7A7),
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w400,
+                          height: 14.06 / 12,
+                          fontSize: 12,
                         ),
                         prefixIcon:
-                            const Icon(Icons.search, color: Color(0XFF505050)),
+                            const Icon(Icons.search, color: Color(0XFFA7A7A7)),
                         contentPadding: EdgeInsets.symmetric(horizontal: 16),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(11.0),
@@ -196,6 +202,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       fontFamily: 'Anton',
                       fontWeight: FontWeight.w400,
                       fontSize: 24,
+                      height: 36.13 / 24,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -215,6 +222,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                   style: TextStyle(
                     color: Color(0xFFFFFFFF),
                     fontFamily: 'Anton',
+                    fontWeight: FontWeight.w400,
                     fontSize: 32,
                     height: 48.17 / 32,
                   ),
@@ -239,7 +247,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       fontFamily: 'Anton',
                       fontWeight: FontWeight.w400,
                       fontSize: 24,
+                      height: 36.13 / 24,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 )),
             GestureDetector(
@@ -259,7 +269,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
+                      height: 24 / 16,
                     ),
+                    textAlign: TextAlign.center,
                   )),
             ),
 
@@ -300,7 +312,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         fontFamily: 'Anton',
                         fontWeight: FontWeight.w400,
                         fontSize: 24,
+                        height: 36.13 / 24,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -324,7 +338,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         fontFamily: 'Anton',
                         fontWeight: FontWeight.w400,
                         fontSize: 32,
+                        height: 48.17 / 32,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -348,7 +364,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         fontFamily: 'Anton',
                         fontWeight: FontWeight.w400,
                         fontSize: 24,
+                        height: 36.13 / 24,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -371,6 +389,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
+                      height: 24 / 16,
                     ),
                   ),
                 ),
@@ -392,7 +411,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
+                      height: 24 / 16,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
@@ -438,6 +459,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 20,
+                                height: 30 / 20,
                               ),
                             ),
                           )),
@@ -510,6 +532,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
                             fontSize: 20,
+                            height: 30 / 20,
                           ),
                         ),
                       ),
@@ -541,124 +564,130 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
               ),
 
               const SizedBox(height: 100),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 0.0),
-            child: Container(
-              width: 700, // Adjust the width of the container here
-              height: 127,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFFF34D58),
-                    Color(0xFFEB3442),
-                    Color(0xFFE72736)
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                color: const Color(0xFF383838),
-                borderRadius: BorderRadius.circular(4.0),
-              ),
-              child: Stack(
-                children: [
-                  // Top right image
-                  Positioned(
-                    top: 1,
-                    right: 7,
-                    child: Image.asset(
-                      'assets/images/icons8_play_button 2.png', // Replace with your image path
-                      width: 38.97, // Adjust width as needed
-                      height: 38.97, // Adjust height as needed
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                child: Container(
+                  width: 700, // Adjust the width of the container here
+                  height: 127,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color(0xFFF34D58),
+                        Color(0xFFEB3442),
+                        Color(0xFFE72736)
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
+                    color: const Color(0xFF383838),
+                    borderRadius: BorderRadius.circular(4.0),
                   ),
-                  // Bottom left image
-                  Positioned(
-                    bottom: 27,
-                    left: 13,
-                    child: Image.asset(
-                      'assets/images/icons8_play_button 3.png', // Replace with your image path
-                      width: 38.97, // Adjust width as needed
-                      height: 38.97, // Adjust height as needed
-                    ),
-                  ),
-                  Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Column(
-                          children: [
-                            const Text(
-                              'SUBSCRIBE TO OUR YOUTUBE CHANNEL',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: 'Anton',
-                                fontWeight: FontWeight.w400,
-                                fontSize: 26,
-                                shadows: [
-          Shadow(
-            color: Color.fromRGBO(0, 0, 0, 0.5), // Shadow color
-            offset: Offset(2.0, 2.0), // Shadow offset
-            blurRadius: 3.0, // Shadow blur radius
-          ),
-        ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 18.0),
-                              child: Container(
-                                width: 211,
-                                height: 43,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFFFFFFF), // Red color
-                                  borderRadius: BorderRadius.circular(
-                                      6.4), // Adjust container border radius
-                                ),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 7, vertical: 4),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      // // Container for the image
-                                      // Container(
-                                      //   alignment: Alignment.center,
-                                      Transform.translate(
-                                        offset: Offset(0,
-                                            4), // Move the image down by 4 pixels
-                                        child: Image.asset(
-                                          'assets/images/Group 533.png', // Replace with your image path
-                                          width: 30, // Adjust width as needed
-                                          height:
-                                              30.02, // Adjust height as needed
-                                        ),
-                                      ),
-                                      const SizedBox(width: 6.0),
-                                      // Container for the text
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'Click to Subscribe',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: 'Roboto',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Color(
-                                                0xFFFF0000), // Text color inside the button
-                                          ),
-                                        ),
-                                      ),
-                                    ]),
-                              ),
-                            ),
-                          ],
+                  child: Stack(
+                    children: [
+                      // Top right image
+                      Positioned(
+                        top: 1,
+                        right: 7,
+                        child: Image.asset(
+                          'assets/images/icons8_play_button 2.png', // Replace with your image path
+                          width: 38.97, // Adjust width as needed
+                          height: 38.97, // Adjust height as needed
                         ),
-                      ))
-                ],
+                      ),
+                      // Bottom left image
+                      Positioned(
+                        bottom: 27,
+                        left: 13,
+                        child: Image.asset(
+                          'assets/images/icons8_play_button 3.png', // Replace with your image path
+                          width: 38.97, // Adjust width as needed
+                          height: 38.97, // Adjust height as needed
+                        ),
+                      ),
+                      Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20.0),
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'SUBSCRIBE TO OUR YOUTUBE CHANNEL',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Color(0xFFFFFFFF),
+                                    fontFamily: 'Anton',
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 26,
+                                    height: 36.13 / 26,
+                                    shadows: [
+                                      Shadow(
+                                        color: Color.fromRGBO(
+                                            0, 0, 0, 0.5), // Shadow color
+                                        offset:
+                                            Offset(2.0, 2.0), // Shadow offset
+                                        blurRadius: 4.0, // Shadow blur radius
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 18.0),
+                                  child: Container(
+                                    width: 211,
+                                    height: 43,
+                                    decoration: BoxDecoration(
+                                      color:
+                                          const Color(0xFFFFFFFF), // Red color
+                                      borderRadius: BorderRadius.circular(
+                                          6.4), // Adjust container border radius
+                                    ),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 7, vertical: 4),
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          // // Container for the image
+                                          // Container(
+                                          //   alignment: Alignment.center,
+                                          Transform.translate(
+                                            offset: Offset(0,
+                                                4), // Move the image down by 4 pixels
+                                            child: Image.asset(
+                                              'assets/images/Group 533.png', // Replace with your image path
+                                              width:
+                                                  30, // Adjust width as needed
+                                              height:
+                                                  30.02, // Adjust height as needed
+                                            ),
+                                          ),
+                                          const SizedBox(width: 6.0),
+                                          // Container for the text
+                                          Container(
+                                            alignment: Alignment.center,
+                                            child: const Text(
+                                              'Click to Subscribe',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: 'Roboto',
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                                height: 21.09 / 18,
+                                                color: Color(
+                                                    0xFFFF0000), // Text color inside the button
+                                              ),
+                                            ),
+                                          ),
+                                        ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
               ),
-            ),
-          ),
-
 
               const SizedBox(height: 80),
               // Container with Image and Texts
@@ -699,6 +728,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
                             fontSize: 24,
+                            height: 36.13 / 24,
                           ),
                         )),
                   ),
@@ -723,6 +753,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.w400,
                           fontSize: 32,
+                          height: 48.17 / 32,
                         ),
                       ),
                     ),
@@ -748,6 +779,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             fontFamily: 'Anton',
                             fontWeight: FontWeight.w400,
                             fontSize: 24,
+                            height: 36.13 / 24,
                           ),
                         ),
                       ),
@@ -771,6 +803,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         fontFamily: 'Roboto',
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
+                        height: 24 / 16,
                       ),
                     ),
                   ),
@@ -794,6 +827,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                         fontFamily: 'Roboto',
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
+                        height: 18.75 / 16,
                         decoration:
                             TextDecoration.underline, // Underline the text
                         decorationColor:
@@ -839,7 +873,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                             0, -10), // Move the image up by 10 pixels
                         child: Image.asset(
                           'assets/images/Group 528 (2).png', // Replace with your image asset path
-                          height: 25, // Adjust the height of the image here
+                          height: 30, // Adjust the height of the image here
                           width: 209,
                           fit: BoxFit.cover,
                         ),
@@ -867,6 +901,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           fontSize: 24,
                           height: 36.13 / 24,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
@@ -887,8 +922,10 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           color: Color(0xFFFFFFFF),
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.w400,
-                          fontSize: 28,
+                          fontSize: 32,
+                          height: 48.17 / 32,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
@@ -910,7 +947,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.w400,
                           fontSize: 24,
+                          height: 36.13 / 24,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
@@ -932,6 +971,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           fontFamily: 'Roboto',
                           fontWeight: FontWeight.w400,
                           fontSize: 16,
+                          height: 24 / 16,
                         ),
                       ),
                     ),
@@ -982,6 +1022,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                       fontFamily: 'Anton',
                                       fontWeight: FontWeight.w400,
                                       fontSize: 20,
+                                      height: 30 / 20,
                                     ),
                                   ),
                                 ),
@@ -1056,6 +1097,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                     fontFamily: 'Anton',
                                     fontWeight: FontWeight.w400,
                                     fontSize: 20,
+                                    height: 30 / 20,
                                   ),
                                 ),
                               ),
@@ -1088,123 +1130,131 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                   ),
 
                   const SizedBox(height: 100),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 0.0),
-            child: Container(
-              width: 700, // Adjust the width of the container here
-              height: 127,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFFF34D58),
-                    Color(0xFFEB3442),
-                    Color(0xFFE72736)
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                color: const Color(0xFF383838),
-                borderRadius: BorderRadius.circular(4.0),
-              ),
-              child: Stack(
-                children: [
-                  // Top right image
-                  Positioned(
-                    top: 1,
-                    right: 7,
-                    child: Image.asset(
-                      'assets/images/icons8_play_button 2.png', // Replace with your image path
-                      width: 38.97, // Adjust width as needed
-                      height: 38.97, // Adjust height as needed
-                    ),
-                  ),
-                  // Bottom left image
-                  Positioned(
-                    bottom: 27,
-                    left: 13,
-                    child: Image.asset(
-                      'assets/images/icons8_play_button 3.png', // Replace with your image path
-                      width: 38.97, // Adjust width as needed
-                      height: 38.97, // Adjust height as needed
-                    ),
-                  ),
-                  Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Column(
-                          children: [
-                            const Text(
-                              'SUBSCRIBE TO OUR YOUTUBE CHANNEL',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: 'Anton',
-                                fontWeight: FontWeight.w400,
-                                fontSize: 26,
-                                shadows: [
-          Shadow(
-            color: Color.fromRGBO(0, 0, 0, 0.5), // Shadow color
-            offset: Offset(2.0, 2.0), // Shadow offset
-            blurRadius: 3.0, // Shadow blur radius
-          ),
-        ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 18.0),
-                              child: Container(
-                                width: 211,
-                                height: 43,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFFFFFFF), // Red color
-                                  borderRadius: BorderRadius.circular(
-                                      6.4), // Adjust container border radius
-                                ),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 7, vertical: 4),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      // // Container for the image
-                                      // Container(
-                                      //   alignment: Alignment.center,
-                                      Transform.translate(
-                                        offset: Offset(0,
-                                            4), // Move the image down by 4 pixels
-                                        child: Image.asset(
-                                          'assets/images/Group 533.png', // Replace with your image path
-                                          width: 30, // Adjust width as needed
-                                          height:
-                                              30.02, // Adjust height as needed
-                                        ),
-                                      ),
-                                      const SizedBox(width: 6.0),
-                                      // Container for the text
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'Click to Subscribe',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: 'Roboto',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Color(
-                                                0xFFFF0000), // Text color inside the button
-                                          ),
-                                        ),
-                                      ),
-                                    ]),
-                              ),
-                            ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                    child: Container(
+                      width: 700, // Adjust the width of the container here
+                      height: 127,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFFF34D58),
+                            Color(0xFFEB3442),
+                            Color(0xFFE72736)
                           ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
                         ),
-                      ))
-                ],
-              ),
-            ),
-          ),
+                        color: const Color(0xFF383838),
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          // Top right image
+                          Positioned(
+                            top: 1,
+                            right: 7,
+                            child: Image.asset(
+                              'assets/images/icons8_play_button 2.png', // Replace with your image path
+                              width: 38.97, // Adjust width as needed
+                              height: 38.97, // Adjust height as needed
+                            ),
+                          ),
+                          // Bottom left image
+                          Positioned(
+                            bottom: 27,
+                            left: 13,
+                            child: Image.asset(
+                              'assets/images/icons8_play_button 3.png', // Replace with your image path
+                              width: 38.97, // Adjust width as needed
+                              height: 38.97, // Adjust height as needed
+                            ),
+                          ),
+                          Align(
+                              alignment: Alignment.center,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 20.0),
+                                child: Column(
+                                  children: [
+                                    const Text(
+                                      'SUBSCRIBE TO OUR YOUTUBE CHANNEL',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Color(0xFFFFFFFF),
+                                        fontFamily: 'Anton',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 26,
+                                        height: 36.13 / 26,
+                                        shadows: [
+                                          Shadow(
+                                            color: Color.fromRGBO(
+                                                0, 0, 0, 0.5), // Shadow color
+                                            offset: Offset(
+                                                2.0, 2.0), // Shadow offset
+                                            blurRadius:
+                                                4.0, // Shadow blur radius
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 18.0),
+                                      child: Container(
+                                        width: 211,
+                                        height: 43,
+                                        decoration: BoxDecoration(
+                                          color: const Color(
+                                              0xFFFFFFFF), // Red color
+                                          borderRadius: BorderRadius.circular(
+                                              6.4), // Adjust container border radius
+                                        ),
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7, vertical: 4),
+                                        child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              // // Container for the image
+                                              // Container(
+                                              //   alignment: Alignment.center,
+                                              Transform.translate(
+                                                offset: Offset(0,
+                                                    4), // Move the image down by 4 pixels
+                                                child: Image.asset(
+                                                  'assets/images/Group 533.png', // Replace with your image path
+                                                  width:
+                                                      30, // Adjust width as needed
+                                                  height:
+                                                      30.02, // Adjust height as needed
+                                                ),
+                                              ),
+                                              const SizedBox(width: 6.0),
+                                              // Container for the text
+                                              Container(
+                                                alignment: Alignment.center,
+                                                child: const Text(
+                                                  'Click to Subscribe',
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Roboto',
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 18,
+                                                    height: 21.09 / 18,
+                                                    color: Color(
+                                                        0xFFFF0000), // Text color inside the button
+                                                  ),
+                                                ),
+                                              ),
+                                            ]),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ))
+                        ],
+                      ),
+                    ),
+                  ),
 
                   const SizedBox(height: 100),
                   Column(
@@ -1271,7 +1321,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 24,
+                                height: 36.13 / 24,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -1294,7 +1346,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 32,
+                                height: 48.17 / 32,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -1317,7 +1371,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 24,
+                                height: 36.13 / 24,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -1340,7 +1396,9 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16,
+                                height: 24 / 16,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -1378,6 +1436,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 20, // Adjust font size as needed
                                   color: Colors.white,
+                                  height: 30 / 20,
                                 ),
                               ),
                             ),
@@ -1436,6 +1495,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
                                           fontSize: 20,
+                                          height: 30 / 20,
                                         ),
                                       ),
                                     ),
@@ -1511,6 +1571,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
                                           fontSize: 20,
+                                          height: 30 / 20,
                                         ),
                                       ),
                                     ),
@@ -1586,6 +1647,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
                                           fontSize: 20,
+                                          height: 30 / 20,
                                         ),
                                       ),
                                     ),
@@ -1661,6 +1723,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
                                           fontSize: 20,
+                                          height: 30 / 20,
                                         ),
                                       ),
                                     ),
@@ -1726,6 +1789,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 20, // Adjust font size as needed
                                   color: Colors.white,
+                                  height: 30 / 20,
                                 ),
                               ),
                             ),
@@ -1787,6 +1851,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 16,
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
+                                          height: 24.09 / 16,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -1798,6 +1863,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 14,
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w400,
+                                          height: 16.41 / 14,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -1843,6 +1909,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                                 fontSize: 12,
                                                 fontFamily: 'Inter',
                                                 fontWeight: FontWeight.w400,
+                                                height: 14.52 / 12,
                                               ),
                                               textAlign: TextAlign.start,
                                             ),
@@ -1904,6 +1971,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 16,
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
+                                          height: 24.09 / 16,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -1915,6 +1983,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 14,
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w400,
+                                          height: 16.41 / 14,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -1960,6 +2029,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                                 fontSize: 12,
                                                 fontFamily: 'Inter',
                                                 fontWeight: FontWeight.w400,
+                                                height: 14.52 / 12,
                                               ),
                                               textAlign: TextAlign.start,
                                             ),
@@ -2021,6 +2091,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 16,
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
+                                          height: 24.09 / 16,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -2032,6 +2103,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 14,
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w400,
+                                          height: 16.41 / 14,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -2077,6 +2149,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                                 fontSize: 12,
                                                 fontFamily: 'Inter',
                                                 fontWeight: FontWeight.w400,
+                                                height: 14.52 / 12,
                                               ),
                                               textAlign: TextAlign.start,
                                             ),
@@ -2138,6 +2211,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 16,
                                           fontFamily: 'Anton',
                                           fontWeight: FontWeight.w400,
+                                          height: 24.09 / 16,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -2149,6 +2223,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 14,
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w400,
+                                          height: 16.41 / 14,
                                         ),
                                         textAlign: TextAlign.left,
                                       ),
@@ -2194,6 +2269,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                                 fontSize: 12,
                                                 fontFamily: 'Inter',
                                                 fontWeight: FontWeight.w400,
+                                                height: 14.52 / 12,
                                               ),
                                               textAlign: TextAlign.start,
                                             ),
@@ -2241,6 +2317,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                                           fontSize: 16,
                                           color: Color(0xFFFFFFFF),
                                           fontFamily: 'Roboto',
+                                          height: 24 / 16,
                                         ),
                                       ),
                                       const SizedBox(
