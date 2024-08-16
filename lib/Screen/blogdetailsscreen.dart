@@ -176,6 +176,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
+                      height: 18.75 / 16,
                     ),
                   ),
                 ),
@@ -220,11 +221,11 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
               child: Text(
                 'ANTHONY AND KATE',
                 style: TextStyle(
-                  color: Color(0xFFFFFFFF),
-                  fontFamily: 'Anton',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 24,
-                ),
+                    color: Color(0xFFFFFFFF),
+                    fontFamily: 'Anton',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 24,
+                    height: 36.13 / 24),
               ),
             ),
             const Padding(
@@ -236,6 +237,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                   fontFamily: 'Anton',
                   fontWeight: FontWeight.w400,
                   fontSize: 32,
+                  height: 48.17 / 32,
                 ),
               ),
             ),
@@ -248,18 +250,20 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                   fontFamily: 'Anton',
                   fontWeight: FontWeight.w400,
                   fontSize: 24,
+                  height: 36.13 / 24,
                 ),
               ),
             ),
             const Padding(
                 padding: EdgeInsets.only(left: 88, top: 12),
                 child: Text(
-                  '08- January - 2024, 9:23 AM',
+                  '08 - January - 2024, 9:23 AM',
                   style: TextStyle(
                     color: Color(0xFFCDCDCD),
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
+                    height: 24 / 16,
                   ),
                 )),
             SizedBox(height: 32),
@@ -271,8 +275,9 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                   style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white, // Default text color
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFFF1F1F1), // Default text color
+                    height: 23.44 / 20,
                   ),
                   children: [
                     TextSpan(
@@ -291,6 +296,10 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                             ], // Gradient colors
                             tileMode: TileMode.mirror, // How the gradient tiles
                           ).createShader(Rect.fromLTWH(900, 0, 500, 200)),
+                        fontSize: 20,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w400,
+                        height: 23.44 / 20,
                       ),
                     ),
                     TextSpan(
@@ -321,7 +330,8 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                       fontSize: 20,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      color: Colors.white, // Default text color
+                      color: Color(0xFFF1F1F1), // Default text color
+                      height: 23.44 / 20,
                     ),
                     children: [
                       TextSpan(
@@ -341,6 +351,10 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               tileMode:
                                   TileMode.mirror, // How the gradient tiles
                             ).createShader(Rect.fromLTWH(900, 0, 500, 200)),
+                          fontSize: 20,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w500,
+                          height: 23.44 / 20,
                         ),
                       ),
                       TextSpan(
@@ -406,13 +420,14 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                     fontFamily: 'Anton',
                                     fontWeight: FontWeight.w400,
                                     fontSize: 26,
+                                    height: 36.13 / 26,
                                     shadows: [
                                       Shadow(
                                         color: Color.fromRGBO(
                                             0, 0, 0, 0.5), // Shadow color
                                         offset:
                                             Offset(2.0, 2.0), // Shadow offset
-                                        blurRadius: 3.0, // Shadow blur radius
+                                        blurRadius: 4.0, // Shadow blur radius
                                       ),
                                     ],
                                   ),
@@ -459,6 +474,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                                 fontFamily: 'Roboto',
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
+                                                height: 21.09 / 18,
                                                 color: Color(
                                                     0xFFFF0000), // Text color inside the button
                                               ),
@@ -484,7 +500,8 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                       fontSize: 20,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      color: Colors.white, // Default text color
+                      color: Color(0xFFFFFFFF), // Default text color
+                      height: 23.44 / 20,
                     ),
                     children: [
                       TextSpan(
@@ -504,6 +521,10 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               tileMode:
                                   TileMode.mirror, // How the gradient tiles
                             ).createShader(Rect.fromLTWH(900, 0, 500, 200)),
+                          fontSize: 20,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w500,
+                          height: 23.44 / 20,
                         ),
                       ),
                       TextSpan(
@@ -517,7 +538,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
               const SizedBox(height: 40),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Image.asset(
-                  'assets/images/Group 526 (3).png', // Replace with your image asset path
+                  'assets/images/Group 526.png', // Replace with your image asset path
                   height: 203, // Adjust the height of the image here
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -532,7 +553,8 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                         fontSize: 20,
                         fontFamily: 'Roboto',
                         fontWeight: FontWeight.w500,
-                        color: Colors.white, // Default text color
+                        height: 23.44 / 20,
+                        color: Color(0xFFFFFFFF), // Default text color
                       ),
                       children: [
                         TextSpan(
@@ -552,6 +574,10 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 tileMode:
                                     TileMode.mirror, // How the gradient tiles
                               ).createShader(Rect.fromLTWH(900, 0, 500, 200)),
+                            fontSize: 20,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w500,
+                            height: 23.44 / 20,
                           ),
                         ),
                         TextSpan(
@@ -595,6 +621,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                           fontWeight: FontWeight.w400,
                           fontSize: 20, // Adjust font size as needed
                           color: Colors.white,
+                          height: 30 / 20,
                         ),
                       ),
                     ),
@@ -639,6 +666,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               fontFamily: 'Anton',
                               fontWeight: FontWeight.w400,
                               fontSize: 20,
+                              height: 30 / 20,
                             ),
                           ),
                         ),
@@ -691,6 +719,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               fontFamily: 'Anton',
                               fontWeight: FontWeight.w400,
                               fontSize: 20,
+                              height: 30 / 20,
                             ),
                           ),
                         ),
@@ -743,6 +772,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               fontFamily: 'Anton',
                               fontWeight: FontWeight.w400,
                               fontSize: 20,
+                              height: 30 / 20,
                             ),
                           ),
                         ),
@@ -795,6 +825,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                               fontFamily: 'Anton',
                               fontWeight: FontWeight.w400,
                               fontSize: 20,
+                              height: 30 / 20,
                             ),
                           ),
                         ),
@@ -848,6 +879,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                           fontWeight: FontWeight.w400,
                           fontSize: 20, // Adjust font size as needed
                           color: Colors.white,
+                          height: 30 / 20,
                         ),
                       ),
                     ),
@@ -886,6 +918,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 16,
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
+                                height: 24.09 / 16,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -897,6 +930,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
+                                height: 16.41 / 14,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -942,6 +976,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                       fontSize: 12,
                                       fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
+                                      height: 14.52 / 12,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -980,6 +1015,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 16,
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
+                                height: 24.09 / 16,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -991,6 +1027,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
+                                height: 16.41 / 14,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -1036,6 +1073,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                       fontSize: 12,
                                       fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
+                                      height: 14.52 / 12,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -1074,6 +1112,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 16,
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
+                                height: 24.09 / 16,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -1085,6 +1124,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
+                                height: 16.41 / 14,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -1130,6 +1170,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                       fontSize: 12,
                                       fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
+                                      height: 14.52 / 12,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -1168,6 +1209,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 16,
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
+                                height: 24.09 / 16,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -1179,6 +1221,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                 fontSize: 14,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
+                                height: 16.41 / 14,
                               ),
                               textAlign: TextAlign.left,
                             ),
@@ -1224,6 +1267,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                       fontSize: 12,
                                       fontFamily: 'Inter',
                                       fontWeight: FontWeight.w400,
+                                      height: 14.52 / 12,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -1270,6 +1314,7 @@ class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
                                   fontSize: 16,
                                   color: Color(0xFFFFFFFF),
                                   fontFamily: 'Roboto',
+                                  height: 24 / 16,
                                 ),
                               ),
                               const SizedBox(

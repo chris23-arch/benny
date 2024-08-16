@@ -263,7 +263,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
               child: const Padding(
                   padding: EdgeInsets.only(left: 88, top: 12),
                   child: Text(
-                    '08- January - 2024, 9:23 AM',
+                    '08 - January - 2024, 9:23 AM',
                     style: TextStyle(
                       color: Color(0xFFCDCDCD),
                       fontFamily: 'Roboto',
@@ -405,7 +405,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                 child: const Padding(
                   padding: EdgeInsets.only(left: 85, top: 12),
                   child: Text(
-                    '08- January - 2024, 9:23 AM',
+                    '08 - January - 2024, 9:23 AM',
                     style: TextStyle(
                       color: Color(0xFFCDCDCD),
                       fontFamily: 'Roboto',
@@ -965,7 +965,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                     child: const Padding(
                       padding: EdgeInsets.only(left: 85, top: 12),
                       child: Text(
-                        '08- January - 2024, 9:23 AM',
+                        '08 - January - 2024, 9:23 AM',
                         style: TextStyle(
                           color: Color(0xFFCDCDCD),
                           fontFamily: 'Roboto',
@@ -1390,7 +1390,7 @@ class _BlogsNewsScreenState extends State<BlogsNewsScreen> {
                           child: const Padding(
                             padding: EdgeInsets.only(left: 88, top: 12),
                             child: Text(
-                              '08- January - 2024, 9:23 AM',
+                              '08 - January - 2024, 9:23 AM',
                               style: TextStyle(
                                 color: Color(0xFFCDCDCD),
                                 fontFamily: 'Roboto',

@@ -51,6 +51,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                         fontFamily: 'Roboto',
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
+                        height: 18.75 / 16,
                       ),
                     ),
                   ),
@@ -82,6 +83,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                     fontSize: 18,
+                    height: 28 / 18,
                   ),
                 ),
               )),
@@ -98,7 +100,11 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                       decoration: InputDecoration(
                         hintText: 'Avatar',
                         hintStyle: const TextStyle(
-                          color: Color(0XFF505050),
+                          color: Color(0XFFA7A7A7),
+                          fontFamily: "Roboto",
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          height: 14.06 / 12,
                         ),
                         prefixIcon:
                             const Icon(Icons.search, color: Color(0XFF505050)),
@@ -149,6 +155,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
+                height: 28 / 16,
               ),
             ),
           ),
@@ -196,6 +203,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
+                          height: 29.05 / 24,
                         ),
                       ),
                     ),
@@ -209,6 +217,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
+                          height: 19.36 / 16,
                         ),
                       ),
                     ),
@@ -270,12 +279,13 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 26,
+                                height: 36.13 / 26,
                                 shadows: [
                                   Shadow(
                                     color: Color.fromRGBO(
                                         0, 0, 0, 0.5), // Shadow color
                                     offset: Offset(2.0, 2.0), // Shadow offset
-                                    blurRadius: 3.0, // Shadow blur radius
+                                    blurRadius: 4.0, // Shadow blur radius
                                   ),
                                 ],
                               ),
@@ -319,6 +329,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.bold,
                                             fontSize: 18,
+                                            height: 21.09 / 18,
                                             color: Color(
                                                 0xFFFF0000), // Text color inside the button
                                           ),
@@ -361,6 +372,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
+                          height: 29.05 / 24,
                         ),
                       ),
                     ),
@@ -374,6 +386,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
+                          height: 19.36 / 16,
                         ),
                       ),
                     ),
@@ -401,16 +414,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -450,6 +464,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -483,16 +498,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -532,6 +548,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -565,16 +582,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -610,11 +628,11 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                             child: const Text(
                               "Take quiz and WIN!",
                               style: TextStyle(
-                                color: Color(0XFFFFFFFF),
-                                fontSize: 12,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w600,
-                              ),
+                                  color: Color(0XFFFFFFFF),
+                                  fontSize: 12,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w600,
+                                  height: 14.52 / 12),
                               textAlign: TextAlign.start,
                             ),
                           ),
@@ -647,16 +665,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -696,6 +715,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -763,12 +783,13 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontFamily: 'Anton',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 26,
+                                height: 36.13 / 26,
                                 shadows: [
                                   Shadow(
                                     color: Color.fromRGBO(
                                         0, 0, 0, 0.5), // Shadow color
                                     offset: Offset(2.0, 2.0), // Shadow offset
-                                    blurRadius: 3.0, // Shadow blur radius
+                                    blurRadius: 4.0, // Shadow blur radius
                                   ),
                                 ],
                               ),
@@ -812,6 +833,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.bold,
                                             fontSize: 18,
+                                            height: 21.09 / 18,
                                             color: Color(
                                                 0xFFFF0000), // Text color inside the button
                                           ),
@@ -854,6 +876,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
+                          height: 29.05 / 24,
                         ),
                       ),
                     ),
@@ -867,6 +890,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
+                          height: 19.36 / 16,
                         ),
                       ),
                     ),
@@ -894,16 +918,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -943,6 +968,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -976,16 +1002,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1025,6 +1052,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1058,16 +1086,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1107,6 +1136,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1140,16 +1170,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1189,6 +1220,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1222,16 +1254,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1271,6 +1304,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1304,16 +1338,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1353,6 +1388,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1386,16 +1422,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.15 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1435,6 +1472,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
@@ -1468,16 +1506,17 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun",
+                        "Identify Bridgerton\ncharacters based on\nthe fabrics they\nwear....should be fun.",
                         style: TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 15,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
+                          height: 18.75 / 15,
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 32),
                       Stack(
                         children: [
                           // Underline
@@ -1517,6 +1556,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                                 fontSize: 12,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
+                                height: 14.52 / 12,
                               ),
                               textAlign: TextAlign.start,
                             ),
