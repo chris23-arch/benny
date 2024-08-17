@@ -107,7 +107,7 @@ class _QuizWinScreenState extends State<QuizWinScreen> {
                           height: 14.06 / 12,
                         ),
                         prefixIcon:
-                            const Icon(Icons.search, color: Color(0XFF505050)),
+                            const Icon(Icons.search, color: Color(0XFFA7A7A7)),
                         contentPadding: EdgeInsets.symmetric(horizontal: 16),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(11.0),
